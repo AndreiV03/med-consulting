@@ -1,0 +1,112 @@
+.footer {
+  width: 100%;
+  padding-bottom: 2rem;
+}
+
+/* Content */
+
+.footer.footer__content {
+  display: flex;
+  justify-content: space-between;
+  margin: 4rem 0;
+}
+
+.footer__content.columns {
+  display: flex;
+}
+
+.footer__content.column:not(:last-child) {
+  margin-right: 4rem;
+}
+
+.footer__content.column__title,
+.footer__content.newsletter h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+.footer__content.column__list,
+.footer__content.column__items {
+  list-style: none;
+}
+
+.footer__content.column__list a,
+.footer__content.column__items li,
+.footer__content.newsletter h3 {
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: var(--grey);
+  text-decoration: none;
+  transition: 150ms;
+}
+
+.footer__content.column__list li:not(:last-child),
+.footer__content.column__items li:not(:last-child) {
+  margin-bottom: 0.5em;
+}
+.footer__content.column__list a:hover {
+  color: var(--foreground);
+}
+
+.footer__content.newsletter {
+  max-width: 400px;
+}
+
+.footer__content.newsletter__input-container {
+  margin-top: 1.5rem;
+  display: flex;
+  border-radius: 5em;
+  width: fit-content;
+}
+
+.footer__content.newsletter input {
+  background-color: #eee;
+  padding: 0.75em 1em 0.75em 1.5em;
+  border-top-left-radius: 5em;
+  border-bottom-left-radius: 5em;
+  font-weight: 400;
+}
+
+.footer__content.newsletter__input-button {
+  background-color: var(--blue);
+  border-top-right-radius: 5em;
+  border-bottom-right-radius: 5em;
+  padding: 0.75em 1.5em 0.75em 1em;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--background);
+  cursor: pointer;
+  transition: 150ms;
+}
+
+.footer__content.newsletter__input-button:hover {
+  background-color: hsl(218, 91%, 40%);
+}
+
+/* Bottom section */
+
+.footer__bottom-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__bottom-section h2 {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--grey);
+}
+
+.footer__bottom-section.social-media a {
+  font-size: 1.5rem;
+  color: var(--grey);
+  transition: 150ms;
+}
+
+.footer__bottom-section.social-media a:hover {
+  color: var(--foreground);
+}
+
+.footer__bottom-section.social-media a:not(:last-child) {
+  margin-right: 1.5rem;
+}
