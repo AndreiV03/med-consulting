@@ -1,0 +1,137 @@
+.home-page.hero-section {
+  height: calc(100vh - var(--header-height));
+  max-height: 1000px;
+  display: flex;
+  align-items: center;
+}
+
+.home-page.hero-section__content,
+.home-page.hero-section__image {
+  width: 50%;
+}
+
+.home-page.hero-section__content__subtitle {
+  color: var(--green);
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.home-page.hero-section__content__title {
+  font-size: 2.75rem;
+  font-weight: 900;
+  margin: 0.2em 0 1em;
+}
+
+.home-page.hero-section__content__items {
+  display: flex;
+  margin-bottom: 2.5rem;
+}
+
+.home-page.hero-section__content__item {
+  display: flex;
+}
+
+.home-page.hero-section__content__item:not(:last-child) {
+  margin-right: 3rem;
+}
+
+.home-page.hero-section__content__item-icon {
+  height: 100%;
+  margin-right: 1em;
+}
+
+.home-page.hero-section__content__item-icon svg {
+  color: var(--blue);
+  height: 100%;
+  font-size: 1.75rem;
+}
+
+.home-page.hero-section__content__item h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.3em;
+}
+
+.home-page.hero-section__content__item h3 {
+  color: var(--grey);
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.home-page.hero-section__content__button {
+  display: inline-block;
+  color: var(--background);
+  background-color: var(--blue);
+  padding: 1em 2em;
+  border-radius: 5em;
+  cursor: pointer;
+  transition: 150ms;
+  margin-top: 1rem;
+  font-weight: 700;
+}
+
+.home-page.hero-section__content__button:hover {
+  background-color: hsl(218, 91%, 40%);
+  transform: translateY(-0.5rem);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.home-page.hero-section__image {
+  height: 85%;
+  max-height: 500px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.home-page.hero-section__image-container {
+  width: 80%;
+}
+
+.home-page.hero-section__image-container img {
+  border-top-right-radius: 5rem;
+  border-bottom-left-radius: 5rem;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  .home-page.hero-section__content__items {
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+
+  .home-page.hero-section__content__item:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  .home-page.hero-section__image-container {
+    width: 90%;
+  }
+
+  .home-page.hero-section__content__title {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .home-page.hero-section {
+    flex-direction: column;
+    height: fit-content;
+    max-height: unset;
+  }
+
+  .home-page.hero-section__content,
+  .home-page.hero-section__image {
+    width: 100%;
+  }
+
+  .home-page.hero-section__content {
+    margin-top: 3rem;
+  }
+
+  .home-page.hero-section__image {
+    display: none;
+  }
+}

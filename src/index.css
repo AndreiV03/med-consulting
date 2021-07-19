@@ -23,6 +23,7 @@
   padding: 0;
 }
 
+html,
 body,
 input {
   font-family: "Roboto", serif;
@@ -47,7 +48,7 @@ button {
   max-width: 1200px;
   min-height: 100vh;
   margin: 0 auto;
-  padding: var(--header-height) 5vw 0;
+  padding: var(--header-height) 7.5vw 0;
 }
 
 /* Import components */
@@ -57,7 +58,9 @@ button {
 @import url("./components/footer/footer.css");
 
 /* Internal components*/
-@import url("./pages/home/item/item.css");
+@import url("./pages/home/hero-section/hero-section.css");
+@import url("./pages/home/services/services.css");
+@import url("./pages/home/specializations/specializations.css");
 
 /* Pages */
 @import url("./pages/home/home.css");

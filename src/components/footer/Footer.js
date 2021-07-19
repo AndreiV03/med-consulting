@@ -4,7 +4,7 @@ import { RiFacebookCircleFill, RiInstagramFill, RiLinkedinBoxFill, RiMailFill } 
 
 export default function Footer() {
   return (
-    <div className="footer">
+    <div className="footer component">
       <div className="footer footer__content">
         <div className="footer__content columns">
           <div className="footer__content column">
@@ -19,7 +19,7 @@ export default function Footer() {
           </div>
 
           <div className="footer__content column">
-            <h2 className="footer__content column__title">Contact</h2>
+            <h2 className="footer__content column__title">Contact Informations</h2>
 
             <ul className="footer__content column__items">
               <li>Kaasgrabengasse 16/5, 1190 Wien</li>
@@ -39,7 +39,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="footer__bottom-section">
+      <div className="footer footer__bottom-section">
         <h2>© 2021 MED Consulting. All rights reserved.</h2>
 
         <div className="footer__bottom-section social-media">
