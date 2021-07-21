@@ -1,0 +1,39 @@
+{
+  "heroSectionCards": [
+    {
+      "textOne": "Get free consultation",
+      "textTwo": "Lorem ipsum dolor sit"
+    },
+    {
+      "textOne": "Free partnership",
+      "textTwo": "Lorem ipsum dolor sit"
+    },
+    {
+      "textOne": "Find the best doctors",
+      "textTwo": "Lorem ipsum dolor sit"
+    },
+    {
+      "textOne": "Ask your questions",
+      "textTwo": "Lorem ipsum dolor sit"
+    }
+  ],
+  "secondSectionCards": [
+    {
+      "textOne": "Get free consultation",
+      "textTwo": "Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+      "textOne": "Free partnership",
+      "textTwo": "Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+      "textOne": "Find the best doctors",
+      "textTwo": "Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+      "textOne": "Ask your questions",
+      "textTwo": "Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    }
+  ],
+  "services": ["weight issues", "fertility", "sleep issues", "anxiety", "diabetes", "back pain", "headaches", "allergies"]
+}

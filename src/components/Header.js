@@ -1,7 +1,8 @@
 import React, { useEffect, useRef } from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "gatsby";
 
-import LogoWhite from "../../assets/logo-white.svg";
+import Logo from "../assets/images/svg/logo.svg";
+import "../styles/components/header.css";
 
 export default function Header() {
   const headerElement = useRef(null);
@@ -12,8 +13,8 @@ export default function Header() {
 
     const observerCallback = ([entry]) => {
       if (!entry.isIntersecting)
-        headerElement.current.classList.add("header--active");
-      else headerElement.current.classList.remove("header--active");
+        headerElement.current.classList.add("header-shadow");
+      else headerElement.current.classList.remove("header-shadow");
     }
 
     const observerOptions = {
@@ -36,20 +37,20 @@ export default function Header() {
   return (
     <>
       <header className="header" ref={headerElement}>
-        <div className="header__container">
-          <div className="header__logo">
-            <img src={LogoWhite} alt="" />
+        <div className="container">
+          <div className="container-logo">
+            <Logo height={48} />
           </div>
 
-          <div className="header__content">
-            <ul className="header__list">
-              <li><NavLink to="/" exact activeClassName="header__list-link--active">Home</NavLink></li>
-              <li><NavLink to="/services" exact activeClassName="header__list-link--active">Services</NavLink></li>
-              <li><NavLink to="/specializations" exact activeClassName="header__list-link--active">Specializations</NavLink></li>
-              <li><NavLink to="/prices" exact activeClassName="header__list-link--active">Prices</NavLink></li>
-            </ul>
+          <div className="container-content">
+            <div className="container-list">
+              <Link to="/" activeClassName="link--active">Home</Link>
+              <Link to="/services" activeClassName="link--active">Services</Link>
+              <Link to="/specializations" activeClassName="link--active">Specializations</Link>
+              <Link to="/prices" activeClassName="link--active">Prices</Link>
+            </div>
 
-            <div className="header__button">Discover more</div>
+            <div className="container-button">Discover more</div>
           </div>
         </div>
       </header>

@@ -1,0 +1,267 @@
+/* Hero section */
+
+.hero-section {
+  height: calc(100vh - var(--header-height));
+  max-height: 1000px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-section .content {
+  width: 50%;
+}
+
+.hero-section .content .subtitle {
+  color: var(--green);
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.hero-section .content .title {
+  font-size: 3rem;
+  font-weight: 900;
+  margin: 0.25em 0 4rem;
+}
+
+.hero-section .cards {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.hero-section .card {
+  display: flex;
+  align-items: center;
+}
+
+.hero-section .card:not(:last-child) {
+  margin-right: 3rem;
+}
+
+.hero-section .card-icon {
+  height: 40px;
+  width: 40px;
+  background-color: var(--light-blue);
+  margin-right: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7.5px;
+}
+
+.hero-section .card-icon svg {
+  color: var(--blue);
+  font-size: 1.25rem;
+}
+
+.hero-section .card h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.3em;
+}
+
+.hero-section .card p {
+  color: var(--grey);
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.hero-section .button {
+  display: inline-block;
+  color: var(--background);
+  background-color: var(--blue);
+  padding: 1em 2em;
+  border-radius: 5em;
+  cursor: pointer;
+  transition: 150ms;
+  margin-top: 2rem;
+  font-weight: 700;
+}
+
+.hero-section .button:hover {
+  background-color: hsl(218, 91%, 40%);
+  transform: translateY(-0.5rem);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.hero-section .image-container {
+  height: 100%;
+  width: 50%;
+  max-height: 500px;
+  padding-left: 4rem;
+}
+
+.hero-section .image-container .image {
+  height: 100%;
+}
+
+.hero-section .image-container img {
+  border-top-right-radius: 3rem;
+  border-bottom-left-radius: 3rem;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+/* Second section */
+
+.second-section {
+  margin: 2.5rem 0 5rem;
+}
+
+.second-section .text-box {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.second-section .text-box .subtitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--green);
+  text-transform: uppercase;
+}
+
+.second-section .text-box .title {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-top: 0.25em;
+}
+
+.second-section .cards {
+  display: flex;
+}
+
+.second-section .card {
+  flex: 1;
+}
+
+.second-section .card:not(:last-child) {
+  margin-right: 3rem;
+}
+
+.second-section .card-icon {
+  height: 40px;
+  width: 40px;
+  background-color: var(--light-blue);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7.5px;
+}
+
+.second-section .card-icon svg {
+  color: var(--blue);
+  font-size: 1.25rem;
+}
+
+.second-section .card h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.6em;
+}
+
+.second-section .card p {
+  color: var(--grey);
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+/* Third section */
+
+.third-section {
+  text-align: center;
+  margin: 5rem auto;
+}
+
+.third-section .title {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.third-section .slideshow {
+  position: relative;
+  height: 40px;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-top: 0.3em;
+}
+
+.third-section .slideshow h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--blue);
+  position: absolute;
+  width: 100%;
+}
+
+.third-section .link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.third-section .link a {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--green);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.third-section .link svg {
+  color: var(--green);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 150ms;
+}
+
+.third-section .link:hover > svg {
+  transform: translateX(0.5em);
+}
+
+/* Fourth section */
+
+.fourth-section {
+  margin: 5rem 0;
+  text-align: center;
+}
+
+.fourth-section .text-box {
+  margin-bottom: 3rem;
+}
+
+.fourth-section .text-box .title {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.fourth-section .text-box .subtitle {
+  font-size: 1rem;
+  font-weight: 500;
+  max-width: 400px;
+  margin: 0.5em auto 0;
+}
+
+.fourth-section .items {
+  display: grid;
+  grid-template-columns: repeat(2, 300px);
+  grid-row-gap: 3rem;
+  grid-column-gap: 6rem;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.fourth-section .item svg {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+.fourth-section .item p {
+  font-size: 1rem;
+  font-weight: 500;
+}
