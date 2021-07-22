@@ -36,16 +36,16 @@
   color: var(--grey);
 }
 
-.footer .bottom-section__social-media a {
+.footer .bottom-section .social-media a {
   font-size: 1.5rem;
   color: var(--grey);
   transition: 150ms;
 }
 
-.footer .bottom-section__social-media a:hover {
+.footer .bottom-section .social-media a:hover {
   color: var(--foreground);
 }
 
-.footer .bottom-section__social-media a:not(:last-child) {
+.footer .bottom-section .social-media a:not(:last-child) {
   margin-right: 1.5rem;
 }

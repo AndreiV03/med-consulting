@@ -18,24 +18,38 @@ const illustrations = [IllustrationOne, IllustrationTwo, IllustrationThree, Illu
 
 const services = ["weight issues", "fertility", "sleep issues", "anxiety", "diabetes", "back pain", "headaches", "allergies"];
 
+const cardsVariants = {
+  animate: {
+    transition: {
+      delayChildren: 0.3,
+      staggerChildren: 0.2
+    }
+  }
+}
+
+const cardVariants = {
+  initial: { y: 20, opacity: 0 },
+  animate: { y: 0, opacity: 1 }
+}
+
 function Card({ cards, icons, index }) {
   const Icon = icons[index];
 
   return (
-    <div className="card">
+    <motion.div className="card" variants={cardVariants}>
       <div className="card-icon">
         <Icon />
       </div>
       
       <div>
-        <h3>{cards[index].textOne}</h3>
+        <h4>{cards[index].textOne}</h4>
         <p>{cards[index].textTwo}</p>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
-function Item({ index }) {
+function Item({ illustrationsText, index }) {
   const Illustration = illustrations[index];
 
   return (
@@ -64,40 +78,38 @@ export default function Home({ data }) {
 
   const { heroSectionCards } = data.file.childrenDataJson[0];
   const { secondSectionCards } = data.file.childrenDataJson[0];
+  const illustrationsText = {};
 
   return (
     <Layout>
       <div className="hero-section">
-        <div className="content">
-          <h3 className="subtitle">Certificated doctors</h3>
+        <motion.div className="content" initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ ease: "easeInOut", duration: 0.3 }}>
+          <h4 className="subtitle">Certificated doctors</h4>
           <h1 className="title">Search & Find Clinic For Your Surgery</h1>
 
-          <div className="cards">
+          <motion.div className="cards" initial="initial" animate="animate" variants={cardsVariants}>
             <Card cards={heroSectionCards} icons={heroSectionIcons} index={0} />
             <Card cards={heroSectionCards} icons={heroSectionIcons} index={1} />
-          </div>
-
-          <div className="cards">
             <Card cards={heroSectionCards} icons={heroSectionIcons} index={2} />
             <Card cards={heroSectionCards} icons={heroSectionIcons} index={3} />
-          </div>
+          </motion.div>
 
           <div className="button">Discover more</div>
-        </div>
+        </motion.div>
 
-        <div className="image-container">
+        <motion.div className="image-container" initial={{ y: 20, x: 20, opacity: 0 }} animate={{ y: 0, x: 0, opacity: 1 }} transition={{ ease: "easeInOut", duration: 0.4 }}>
           <StaticImage
             src="../assets/images/hero-section-image.jpeg"
             alt=""
             placeholder="blurred"
             className="image"
           />
-        </div>
+        </motion.div>
       </div>
 
       <div className="second-section">
         <div className="text-box">
-          <h3 className="subtitle">Fastest solutions</h3>
+          <h4 className="subtitle">Fastest solutions</h4>
           <h2 className="title">4 Easy Steps And Get Your Solution</h2>
         </div>
 
@@ -110,7 +122,7 @@ export default function Home({ data }) {
       </div>
 
       <div className="third-section">
-        <h1 className="title">Get care today for</h1>
+        <h2 className="title">Get care today for</h2>
 
         <div className="slideshow">
           {
@@ -118,14 +130,14 @@ export default function Home({ data }) {
               <AnimatePresence key={service}>
                 {
                   service === currentService && (
-                    <motion.h2
+                    <motion.h3
                       initial={{ y: "-150%", opacity: 0 }}
                       animate={{ y: "0", opacity: 1 }}
                       exit={{ y: "150%", opacity: 0 }}
                       transition={{ duration: 1, stiffness: 0 }}
                     >
                       {service}
-                    </motion.h2>
+                    </motion.h3>
                   )
                 }
               </AnimatePresence>
@@ -142,14 +154,14 @@ export default function Home({ data }) {
       <div className="fourth-section">
         <div className="text-box">
           <h2 className="title">A membership designed around you</h2>
-          <h3 className="subtitle">We work with your insurance just like a typical doctor’s office, but we offer so much more.</h3>
+          <p className="subtitle">We work with your insurance just like a typical doctor’s office, but we offer so much more.</p>
         </div>
 
         <div className="items">
-          <Item index={0} />
-          <Item index={1} />
-          <Item index={2} />
-          <Item index={3} />
+          <Item illustrationsText={illustrationsText} index={0} />
+          <Item illustrationsText={illustrationsText} index={1} />
+          <Item illustrationsText={illustrationsText} index={2} />
+          <Item illustrationsText={illustrationsText} index={3} />
         </div>
       </div>
     </Layout>

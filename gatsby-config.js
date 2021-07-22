@@ -1,4 +1,10 @@
 module.exports = {
+  siteMetadata: {
+    title: "MED Consulting",
+    description: "Counseling and assistance in the medical circuit in Vienna. The best doctors, the best hospitals.",
+    url: "",
+    author: "Andrei Voicu"
+  },
   plugins: [
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
@@ -26,9 +32,5 @@ module.exports = {
         path: `${__dirname}/src/assets/data/`
       }
     }
-  ],
-  siteMetadata: {
-    title: "MED Consulting",
-    description: ""
-  }
+  ]
 }

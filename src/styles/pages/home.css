@@ -25,17 +25,15 @@
 }
 
 .hero-section .cards {
-  display: flex;
-  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 1rem;
+  grid-row-gap: 2rem;
 }
 
 .hero-section .card {
   display: flex;
   align-items: center;
-}
-
-.hero-section .card:not(:last-child) {
-  margin-right: 3rem;
 }
 
 .hero-section .card-icon {
@@ -54,7 +52,7 @@
   font-size: 1.25rem;
 }
 
-.hero-section .card h3 {
+.hero-section .card h4 {
   font-size: 1rem;
   font-weight: 500;
   margin-bottom: 0.3em;
@@ -74,7 +72,7 @@
   border-radius: 5em;
   cursor: pointer;
   transition: 150ms;
-  margin-top: 2rem;
+  margin-top: 4rem;
   font-weight: 700;
 }
 
@@ -156,7 +154,7 @@
   font-size: 1.25rem;
 }
 
-.second-section .card h3 {
+.second-section .card h4 {
   font-size: 1rem;
   font-weight: 500;
   margin-bottom: 0.6em;
@@ -188,7 +186,7 @@
   margin-top: 0.3em;
 }
 
-.third-section .slideshow h2 {
+.third-section .slideshow h3 {
   font-size: 1.75rem;
   font-weight: 700;
   color: var(--blue);

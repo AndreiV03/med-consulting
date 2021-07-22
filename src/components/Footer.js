@@ -9,8 +9,8 @@ export default function Footer() {
     <footer className="footer">
       <div className="content">
         <Link to="/">Home</Link>
-        <Link to="/services">Services</Link>
-        <Link to="/specializations">Specializations</Link>
+        <Link to="/">Services</Link>
+        <Link to="/">Specializations</Link>
         <Link to="/">Media Center</Link>
         <Link to="/">Careers</Link>
         <Link to="/">About</Link>
@@ -22,7 +22,7 @@ export default function Footer() {
       <div className="bottom-section">
         <h2>© 2021 MED Consulting. All rights reserved.</h2>
 
-        <div className="bottom-section__social-media">
+        <div className="social-media">
           <a aria-label="facebook" href="https://www.facebook.com/adina.alchine"><RiFacebookCircleFill /></a>
           <a aria-label="instagram" href="https://www.instagram.com/adinaalchine/"><RiInstagramFill /></a>
           <a aria-label="linkedin" href="https://www.linkedin.com/in/adina-luiza-alchine-920903a6/"><RiLinkedinBoxFill /></a>
