@@ -2,7 +2,7 @@
 
 .hero-section {
   height: calc(100vh - var(--header-height));
-  max-height: 1000px;
+  max-height: 750px;
   display: flex;
   align-items: center;
 }
@@ -21,14 +21,14 @@
 .hero-section .content .title {
   font-size: 3rem;
   font-weight: 900;
-  margin: 0.25em 0 4rem;
+  margin: 0.25em 0 3rem;
 }
 
 .hero-section .cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 1rem;
-  grid-row-gap: 2rem;
+  grid-row-gap: 2.5rem;
 }
 
 .hero-section .card {
@@ -72,7 +72,7 @@
   border-radius: 5em;
   cursor: pointer;
   transition: 150ms;
-  margin-top: 4rem;
+  margin-top: 3rem;
   font-weight: 700;
 }
 
@@ -243,7 +243,7 @@
   margin: 0.5em auto 0;
 }
 
-.fourth-section .items {
+.fourth-section .illustrations {
   display: grid;
   grid-template-columns: repeat(2, 300px);
   grid-row-gap: 3rem;
@@ -252,14 +252,14 @@
   width: fit-content;
 }
 
-.fourth-section .item svg {
+.fourth-section .illustration svg {
   width: 200px;
   height: 200px;
   margin: 0 auto 1rem;
   display: block;
 }
 
-.fourth-section .item p {
+.fourth-section .illustration p {
   font-size: 1rem;
   font-weight: 500;
 }

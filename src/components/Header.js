@@ -1,12 +1,23 @@
 import React, { useEffect, useRef } from "react";
 import { Link } from "gatsby";
+import { motion } from "framer-motion";
 
-import Logo from "../assets/images/svg/logo.svg";
 import "../styles/components/header.css";
+import Logo from "../images/svg/logo.svg";
 
-export default function Header() {
+const headerVariants = {
+  initial: { opacity: 0 },
+  animate: {
+    opacity: 1,
+    transition: {
+      ease: "easeInOut",
+      duration: 0.3
+    }
+  }
+}
+
+export default function Header({ observerElement }) {
   const headerElement = useRef(null);
-  const headerIntersectionElement = useRef(null);
 
   useEffect(() => {
     let observerRefValue = null;
@@ -17,45 +28,35 @@ export default function Header() {
       else headerElement.current.classList.remove("header-shadow");
     }
 
-    const observerOptions = {
-      rootMargin: "-80px"
-    }
-
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    const observer = new IntersectionObserver(observerCallback);
   
-    if (headerIntersectionElement.current) {
-      observer.observe(headerIntersectionElement.current);
-      observerRefValue = headerIntersectionElement.current;
+    if (observerElement.current) {
+      observer.observe(observerElement.current);
+      observerRefValue = observerElement.current;
     }
 
     return () => {
       if (observerRefValue)
         observer.unobserve(observerRefValue);
     }
-  }, [headerElement, headerIntersectionElement]);
+  }, [headerElement, observerElement]);
 
   return (
-    <>
-      <header className="header" ref={headerElement}>
-        <div className="container">
-          <div className="container-logo">
-            <Logo height={48} />
+    <motion.header className="header" ref={headerElement} initial="initial" animate="animate" variants={headerVariants}>
+      <div className="container">
+        <Logo />
+
+        <div className="container-content">
+          <div className="container-list">
+            <Link to="/" activeClassName="link--active">Home</Link>
+            <Link to="/services" activeClassName="link--active">Services</Link>
+            <Link to="/specializations" activeClassName="link--active">Specializations</Link>
+            <Link to="/prices" activeClassName="link--active">Prices</Link>
           </div>
 
-          <div className="container-content">
-            <div className="container-list">
-              <Link to="/" activeClassName="link--active">Home</Link>
-              <Link to="/services" activeClassName="link--active">Services</Link>
-              <Link to="/specializations" activeClassName="link--active">Specializations</Link>
-              <Link to="/prices" activeClassName="link--active">Prices</Link>
-            </div>
-
-            <div className="container-button">Discover more</div>
-          </div>
+          <div className="container-button">Discover more</div>
         </div>
-      </header>
-
-      <div className="header-observer" ref={headerIntersectionElement}></div>
-    </>
+      </div>
+    </motion.header>
   );
 }

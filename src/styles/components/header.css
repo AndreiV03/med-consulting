@@ -14,15 +14,15 @@
   box-shadow: var(--header-box-shadow);
 }
 
-.header .container-logo {
+.header .container svg {
   height: 100%;
 }
 
-.header .container-logo svg .cls-1 {
+.header .container svg .cls-1 {
   fill: var(--blue);
 }
 
-.header .container-logo svg .cls-2 {
+.header .container svg .cls-2 {
   fill: var(--green);
 }
 
@@ -80,9 +80,4 @@
 
 .header .container-button:hover {
   background-color: hsl(218, 91%, 40%);
-}
-
-.header-observer {
-  position: relative;
-  top: 80px;
 }

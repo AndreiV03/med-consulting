@@ -2,14 +2,14 @@ module.exports = {
   siteMetadata: {
     title: "MED Consulting",
     description: "Counseling and assistance in the medical circuit in Vienna. The best doctors, the best hospitals.",
-    url: "",
-    author: "Andrei Voicu"
+    keywords: ["medical"],
+    url: ""
   },
   plugins: [
+    "gatsby-plugin-react-helmet",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
-    "gatsby-transformer-json",
     {
       resolve: "gatsby-plugin-react-svg",
       options: {
@@ -22,14 +22,7 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: `${__dirname}/src/assets/images/`
-      }
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "data",
-        path: `${__dirname}/src/assets/data/`
+        path: `${__dirname}/src/images/`
       }
     }
   ]
