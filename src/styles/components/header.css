@@ -51,7 +51,7 @@
 }
 
 .header .content-list a {
-  margin-right: 3em;
+  margin-right: 2rem;
   color: var(--foreground);
   text-decoration: none;
   font-weight: 700;
@@ -73,7 +73,7 @@
 /* Media queries */
 
 @media screen and (max-width: 1024px) {
-  .header .content-list {
+  .header .content {
     display: none;
   }
 }

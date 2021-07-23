@@ -4,8 +4,8 @@
   --foreground: #1d2b4f;
   --background: #ffffff;
   --blue: #2b3b99;
-  --light-blue: #e7f0fe;
-  --green: #36bd66;
+  --light-green: hsl(141, 92%, 95%);
+  --green: hsl(141, 56%, 48%);
   --grey: #9495b8;
 
   --header-box-shadow: 0 0 8px rgb(0 0 0 / 16%);

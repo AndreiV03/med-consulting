@@ -18,7 +18,7 @@
   text-transform: uppercase;
   text-decoration: none;
   color: var(--foreground);
-  margin: 0 3em 1em 0;
+  margin: 0 3rem 1rem 0;
   transition: 150ms;
 }
 
@@ -33,7 +33,7 @@
 }
 
 .footer .bottom-section h2 {
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 400;
   color: var(--grey);
 }
@@ -45,7 +45,7 @@
 }
 
 .footer .bottom-section .social-media a:hover {
-  color: var(--foreground);
+  color: var(--green);
 }
 
 .footer .bottom-section .social-media a:not(:last-child) {

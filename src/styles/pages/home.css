@@ -12,16 +12,16 @@
 }
 
 .hero-section .content .subtitle {
-  color: var(--green);
   text-transform: uppercase;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .hero-section .content .title {
   font-size: 3rem;
-  font-weight: 900;
-  margin: 0.25em 0 3rem;
+  font-weight: 500;
+  margin: 0.75rem 0 3rem;
+  color: var(--blue);
 }
 
 .hero-section .cards {
@@ -39,7 +39,7 @@
 .hero-section .card-icon {
   height: 40px;
   width: 40px;
-  background-color: var(--light-blue);
+  background-color: var(--light-green);
   margin-right: 0.75rem;
   display: flex;
   align-items: center;
@@ -48,14 +48,14 @@
 }
 
 .hero-section .card-icon svg {
-  color: var(--blue);
+  color: var(--green);
   font-size: 1.25rem;
 }
 
 .hero-section .card h4 {
   font-size: 1rem;
-  font-weight: 500;
-  margin-bottom: 0.3em;
+  font-weight: 400;
+  margin-bottom: 0.3rem;
 }
 
 .hero-section .card p {
@@ -107,15 +107,15 @@
 
 .second-section .text-box .subtitle {
   font-size: 1rem;
-  font-weight: 600;
-  color: var(--green);
+  font-weight: 400;
   text-transform: uppercase;
 }
 
 .second-section .text-box .title {
   font-size: 2rem;
-  font-weight: 900;
-  margin-top: 0.5em;
+  font-weight: 500;
+  margin-top: 1rem;
+  color: var(--blue);
 }
 
 .second-section .cards {
@@ -127,7 +127,7 @@
 .second-section .card-icon {
   height: 40px;
   width: 40px;
-  background-color: var(--light-blue);
+  background-color: var(--light-green);
   margin-bottom: 1rem;
   display: flex;
   align-items: center;
@@ -136,14 +136,14 @@
 }
 
 .second-section .card-icon svg {
-  color: var(--blue);
+  color: var(--green);
   font-size: 1.25rem;
 }
 
 .second-section .card h4 {
   font-size: 1rem;
-  font-weight: 500;
-  margin-bottom: 0.6em;
+  font-weight: 400;
+  margin-bottom: 0.6rem;
 }
 
 .second-section .card p {
@@ -161,7 +161,8 @@
 
 .third-section .title {
   font-size: 2rem;
-  font-weight: 900;
+  font-weight: 500;
+  color: var(--blue);
 }
 
 .third-section .slideshow {
@@ -169,13 +170,12 @@
   height: 40px;
   margin: 0 auto;
   overflow: hidden;
-  margin-top: 0.5em;
+  margin-top: 0.5rem;
 }
 
 .third-section .slideshow h3 {
   font-size: 1.75rem;
-  font-weight: 700;
-  color: var(--blue);
+  font-weight: 500;
   position: absolute;
   width: 100%;
 }
@@ -189,7 +189,7 @@
 
 .third-section .link a {
   font-size: 0.9rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--green);
   text-decoration: none;
   text-transform: uppercase;
@@ -204,7 +204,7 @@
 }
 
 .third-section .link:hover > svg {
-  transform: translateX(0.5em);
+  transform: translateX(0.5rem);
 }
 
 /* Fourth section */
@@ -220,14 +220,15 @@
 
 .fourth-section .text-box .title {
   font-size: 2rem;
-  font-weight: 900;
+  font-weight: 500;
+  color: var(--blue);
 }
 
 .fourth-section .text-box .subtitle {
   font-size: 1rem;
   font-weight: 500;
   max-width: 400px;
-  margin: 0.5em auto 0;
+  margin: 0.5rem auto 0;
 }
 
 .fourth-section .illustrations {
