@@ -2,7 +2,7 @@
 
 .hero-section {
   height: calc(100vh - var(--header-height));
-  max-height: 750px;
+  max-height: 700px;
   display: flex;
   align-items: center;
 }
@@ -65,15 +65,7 @@
 }
 
 .hero-section .button {
-  display: inline-block;
-  color: var(--background);
-  background-color: var(--blue);
-  padding: 1em 2em;
-  border-radius: 5em;
-  cursor: pointer;
-  transition: 150ms;
   margin-top: 3rem;
-  font-weight: 700;
 }
 
 .hero-section .button:hover {
@@ -110,7 +102,7 @@
 
 .second-section .text-box {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
 .second-section .text-box .subtitle {
@@ -123,19 +115,13 @@
 .second-section .text-box .title {
   font-size: 2rem;
   font-weight: 900;
-  margin-top: 0.25em;
+  margin-top: 0.5em;
 }
 
 .second-section .cards {
-  display: flex;
-}
-
-.second-section .card {
-  flex: 1;
-}
-
-.second-section .card:not(:last-child) {
-  margin-right: 3rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 3rem;
 }
 
 .second-section .card-icon {
@@ -183,7 +169,7 @@
   height: 40px;
   margin: 0 auto;
   overflow: hidden;
-  margin-top: 0.3em;
+  margin-top: 0.5em;
 }
 
 .third-section .slideshow h3 {
@@ -198,15 +184,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 0.5rem;
+  margin-top: 0.75rem;
 }
 
 .third-section .link a {
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: 0.9rem;
+  font-weight: 700;
   color: var(--green);
   text-decoration: none;
   text-transform: uppercase;
+  font-family: "Nunito Sans", sans-serif0;
 }
 
 .third-section .link svg {
@@ -247,7 +234,7 @@
   display: grid;
   grid-template-columns: repeat(2, 300px);
   grid-row-gap: 3rem;
-  grid-column-gap: 6rem;
+  grid-column-gap: 3rem;
   margin: 0 auto;
   width: fit-content;
 }
@@ -262,4 +249,30 @@
 .fourth-section .illustration p {
   font-size: 1rem;
   font-weight: 500;
+}
+
+/* Media queries */
+
+@media screen and (max-width: 1024px) {
+  .second-section .cards {
+    grid-template-columns: repeat(2, 225px);
+    justify-content: center;
+  }
+
+  .second-section .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .second-section .cards {
+    grid-template-columns: repeat(1, 300px);
+  }
+
+  .fourth-section .illustrations {
+    grid-template-columns: repeat(1, 300px);
+  }
 }

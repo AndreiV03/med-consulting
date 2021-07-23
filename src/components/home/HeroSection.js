@@ -1,5 +1,5 @@
 import React from "react";
-import { RiMailSendFill, RiCollageFill, RiUserFill, RiQuestionAnswerFill } from "react-icons/ri";
+import { RiMailSendFill, RiUserFill, RiHomeHeartFill, RiQuestionAnswerFill } from "react-icons/ri";
 import { StaticImage } from "gatsby-plugin-image";
 import { motion } from "framer-motion";
 
@@ -60,7 +60,7 @@ export default function HeroSection() {
           </motion.div>
 
           <motion.div className="card" variants={cardItemVariants}>
-            <div className="card-icon"><RiCollageFill /></div>
+            <div className="card-icon"><RiUserFill /></div>
             
             <div>
               <h4>Free partnership</h4>
@@ -69,7 +69,7 @@ export default function HeroSection() {
           </motion.div>
 
           <motion.div className="card" variants={cardItemVariants}>
-            <div className="card-icon"><RiUserFill /></div>
+            <div className="card-icon"><RiHomeHeartFill /></div>
             
             <div>
               <h4>Find the best doctors</h4>
@@ -93,7 +93,7 @@ export default function HeroSection() {
       <motion.div className="image-container" variants={imageContainerVariants}>
         <StaticImage
           src="../../images/hero-section-image.jpeg"
-          alt=""
+          alt="doctor"
           placeholder="blurred"
           className="image"
         />

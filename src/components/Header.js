@@ -46,15 +46,15 @@ export default function Header({ observerElement }) {
       <div className="container">
         <Logo />
 
-        <div className="container-content">
-          <div className="container-list">
+        <div className="content">
+          <div className="content-list">
             <Link to="/" activeClassName="link--active">Home</Link>
             <Link to="/services" activeClassName="link--active">Services</Link>
             <Link to="/specializations" activeClassName="link--active">Specializations</Link>
             <Link to="/prices" activeClassName="link--active">Prices</Link>
           </div>
 
-          <div className="container-button">Discover more</div>
+          <div className="button">Discover more</div>
         </div>
       </div>
     </motion.header>

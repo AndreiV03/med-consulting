@@ -13,14 +13,18 @@ export default function Seo({ title, description, keywords }) {
 
         return (
           <Helmet>
+            <html lang="en" />
             <title>{metaTitle}</title>
+
             <meta name="description" content={metaDescription} />
             <meta name="keywords" content={metaKeywords} />
             <meta name="theme-color" content="#ffffff" />
-
             <meta name="canonical" content="" />
             <meta name="robots" content="noindex, nofollow" />
             <meta name="googlebot" content="noindex, nofollow" />
+
+            <link rel="manifest" href="manifest.json" />
+            <link rel="icon" href="favicon.ico" />
           </Helmet>
         )
       }}
