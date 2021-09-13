@@ -1,0 +1,35 @@
+:root {
+  --foreground: #000000;
+  --background: #ffffff;
+  --blue: #004f9d;
+  --dark-blue: #004080;
+  --green: #24ce7b;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+input,
+select,
+button {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: var(--foreground);
+}
+
+input,
+select,
+button {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
