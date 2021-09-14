@@ -19,6 +19,25 @@
   height: 100%;
   display: flex;
   align-items: center;
+
+  svg {
+    width: 125px;
+  }
+
+  path {
+    fill: var(--blue);
+    transition: 100ms ease-in;
+  }
+
+  rect {
+    fill: var(--green);
+  }
+
+  &.active {
+    path {
+      fill: var(--background);
+    }
+  }
 }
 
 .container {

@@ -1,11 +1,10 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Dispatch, SetStateAction } from "react";
 import { BiSearch } from "react-icons/bi";
 
 import styles from "../styles/components/header.module.scss";
-import Logo from "../public/logo.png";
 import MenuButton from "./MenuButtons";
+import Logo from "../assets/Logo";
 
 type Props = {
   isMenuOpen: boolean,
@@ -17,9 +16,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen }: Props): JSX.Element => {
   
   return (
     <header className={!isMenuOpen ? styles.header : `${styles.header} ${styles.active}`}>
-      <div className={styles.logo}>
-        <Image src={Logo} alt="" width={167} height={57} />
-      </div>
+      <div className={!isMenuOpen ? styles.logo : `${styles.logo} ${styles.active}`}><Logo /></div>
 
       <div className={styles.container}>
         <div className={!isMenuOpen ? styles.links : `${styles.links} ${styles.active}`}>
