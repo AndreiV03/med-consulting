@@ -1,6 +1,6 @@
 import { useState, ReactNode } from "react";
 
-import styles from "../styles/components/Layout.module.scss";
+import styles from "../styles/components/layout.module.scss";
 import Header from "./Header";
 import Menu from "./Menu";
 
