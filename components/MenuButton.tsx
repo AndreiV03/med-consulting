@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 type Props = {
-  isMenuOpen: boolean
+  isMenuOpen: boolean;
 };
 
 const topLineVariants = {
@@ -24,7 +24,7 @@ const topLineVariants = {
   }
 };
 
-const centerLineVariants = {
+const middleLineVariants = {
   closed: {
     opacity: 1,
     transition: {
@@ -64,10 +64,10 @@ const bottomLineVariants = {
 
 const MenuButton = ({ isMenuOpen }: Props): JSX.Element => {
   return (
-    <motion.svg viewBox="0 0 20 16" preserveAspectRatio="none">
-      <motion.line x1="0" x2="20" y1="0" y2="0" initial="initial" animate={isMenuOpen ? "opened" : "closed"} variants={topLineVariants} />
-      <motion.line x1="0" x2="20" y1="8" y2="8" initial="initial" animate={isMenuOpen ? "opened" : "closed"} variants={centerLineVariants} />
-      <motion.line x1="0" x2="20" y1="16" y2="16" initial="initial" animate={isMenuOpen ? "opened" : "closed"} variants={bottomLineVariants} />
+    <motion.svg viewBox="0 0 20 16" preserveAspectRatio="none" initial="initial">
+      <motion.line x1="0" x2="20" y1="0" y2="0" animate={isMenuOpen ? "opened" : "closed"} variants={topLineVariants} />
+      <motion.line x1="0" x2="20" y1="8" y2="8" animate={isMenuOpen ? "opened" : "closed"} variants={middleLineVariants} />
+      <motion.line x1="0" x2="20" y1="16" y2="16" animate={isMenuOpen ? "opened" : "closed"} variants={bottomLineVariants} />
     </motion.svg>
   );
 }

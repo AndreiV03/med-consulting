@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 
-import SectionOne from "../components/home/SectioOne";
+import SectionOne from "../components/home/SectionOne";
 import SectionTwo from "../components/home/SectionTwo";
 
 const Home: NextPage = () => {

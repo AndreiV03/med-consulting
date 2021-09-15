@@ -9,9 +9,22 @@
   padding: 0 7vw;
   background: var(--background);
   transition: 100ms ease-in;
+  z-index: 15;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: var(--blue);
+  opacity: 0;
+  transition: 100ms ease-in;
+  z-index: -1;
 
   &.active {
-    background: var(--blue);
+    opacity: 1;
   }
 }
 
