@@ -69,7 +69,7 @@ const SectionTwo = (): JSX.Element => {
           ))}
         </div>
 
-        <Link href="/services">
+        <Link href="/services" passHref>
           <a className={styles.link}>
             <span>See all our services</span>
             <RiArrowRightSLine />
@@ -81,7 +81,7 @@ const SectionTwo = (): JSX.Element => {
         <div className={styles.title}>A membership designed around you</div>
         <p className={styles.paragraph}>We work with your insurance just like a typical doctor’s office, but we offer so much more.</p>
 
-        <Link href="/prices">
+        <Link href="/prices" passHref>
           <a className={styles.link}>
             <span>Check your coverage</span>
             <RiArrowRightSLine />

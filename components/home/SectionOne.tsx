@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { RiArrowRightSLine } from "react-icons/ri";
 
 import styles from "../../styles/pages/Home.module.scss";
 
@@ -12,8 +13,11 @@ const SectionOne = (): JSX.Element => {
         <div className={styles.button_fill}>Sign up today</div>
         <div className={styles.button_outline}>Gift a membership</div>
 
-        <Link href="/">
-          <a className={styles.link}>Sponsored membership? Click here</a>
+        <Link href="/" passHref>
+          <a className={styles.link}>
+            <span>Check your coverage</span>
+            <RiArrowRightSLine />
+          </a>
         </Link>
       </div>
 

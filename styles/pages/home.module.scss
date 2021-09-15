@@ -28,6 +28,12 @@
       width: fit-content;
       padding: 1em 2em;
       margin: 1rem 0;
+      cursor: pointer;
+      transition: 100ms ease-in;
+
+      &:hover {
+        background: var(--dark-blue);
+      }
     }
 
     .button_outline {
@@ -41,18 +47,32 @@
     }
 
     .link {
-      font-size: 0.875rem;
-      font-weight: 500;
+      display: flex;
+      align-items: center;
       color: var(--blue);
       text-decoration: none;
       margin-top: 1rem;
-      display: inline-block;
+
+      span {
+        font-size: 0.875rem;
+        font-weight: 600;
+      }
+
+      svg {
+        font-size: 1rem;
+        cursor: pointer;
+        transition: 150ms ease-in;
+      }
+
+      &:hover > svg {
+        transform: translateX(0.5rem);
+      }
     }
   }
 
   .column:last-child {
     background: var(--light-blue);
-    width: 100vw;
+    width: calc(100% + 14vw);
     height: 65vw;
     margin: calc(10vw + 3rem) -7vw 0;
     position: relative;
@@ -129,9 +149,9 @@
     }
 
     svg {
-      font-size: 1.2rem;
+      font-size: 1rem;
       cursor: pointer;
-      transition: 150ms;
+      transition: 150ms ease-in;
     }
 
     &:hover > svg {
