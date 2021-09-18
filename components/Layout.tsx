@@ -1,6 +1,7 @@
 import { useState, ReactNode } from "react";
 
 import styles from "../styles/components/Layout.module.scss";
+import Label from "./Label";
 import Header from "./Header";
 import Menu from "./Menu";
 
@@ -13,6 +14,7 @@ const Layout = ({ children }: Props): JSX.Element => {
   
   return (
     <>
+      <Label />
       <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <Menu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <div className={styles.page}>{children}</div>

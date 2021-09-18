@@ -30,6 +30,7 @@
       margin: 1rem 0;
       cursor: pointer;
       transition: 100ms ease-in;
+      height: fit-content;
 
       &:hover {
         background: var(--dark-blue);
@@ -44,6 +45,7 @@
       border: 1px solid var(--line);
       width: fit-content;
       padding: 1em 2em;
+      height: fit-content;
     }
 
     .link {
@@ -114,6 +116,12 @@
   margin: 0 auto 2.5rem;
 
   .title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--blue);
+  }
+
+  .subtitle {
     font-size: 2.25rem;
     font-weight: 700;
     color: var(--blue);
@@ -121,13 +129,12 @@
 
   .slideshow {
     position: relative;
-    height: 50px;
+    height: 70px;
     margin: 0 auto;
     overflow: hidden;
-    margin-top: 0.2rem;
 
     h3 {
-      font-size: 2.25rem;
+      font-size: 3rem;
       font-weight: 700;
       color: var(--green);
       position: absolute;
@@ -141,7 +148,8 @@
     justify-content: center;
     color: var(--blue);
     text-decoration: none;
-    margin-top: 0.5rem;
+    width: fit-content;
+    margin: 0.5rem auto 0;
 
     span {
       font-size: 0.875rem;
@@ -164,7 +172,7 @@
     font-weight: 400;
     color: var(--blue);
     line-height: 1.4;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
   }
 
   .items {
@@ -175,7 +183,7 @@
   .item {
     display: flex;
     width: 100%;
-    margin-top: 1.5rem;
+    margin-top: 2.25rem;
 
     .container {
       position: relative;
@@ -194,6 +202,58 @@
 
     .link {
       justify-content: flex-start;
+      margin: 0.5rem 0 0;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero_section {
+    .column:first-child {
+      max-width: 50%;
+
+      .title {
+        font-size: 60px;
+      }
+
+      p {
+        font-size: 18px;
+      }
+
+      .buttons {
+        display: flex;
+
+        .button_fill {
+          margin-bottom: 0;
+        }
+
+        .button_outline {
+          margin: 1rem 0 0 1rem;
+        }
+      }
+    }
+
+    .column:last-child {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 45vw;
+      height: 100%;
+      margin: 66px 0 0;
+
+      .box:first-child {
+        width: 75%;
+        height: 65%;
+        top: 15%;
+        right: 0;
+        left: unset;
+      }
+
+      .box:last-child {
+        width: 80%;
+        height: 35%;
+        left: -15%;
+      }
     }
   }
 }

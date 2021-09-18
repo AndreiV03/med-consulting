@@ -1,8 +1,9 @@
 import Link from "next/link";
-import { Dispatch, SetStateAction } from "react";
+import { useEffect, Dispatch, SetStateAction } from "react";
 import { BiSearch } from "react-icons/bi";
 
 import styles from "../styles/components/Header.module.scss";
+import useScroll from "../hooks/useScroll";
 import Logo from "../assets/Logo";
 import MenuButton from "./MenuButton";
 
@@ -12,8 +13,20 @@ type Props = {
 };
 
 const Header = ({ isMenuOpen, setIsMenuOpen }: Props): JSX.Element => {
+  const { scrollY } = useScroll();
+  useEffect(() => {}, [scrollY]);
+
+  const handleHeaderClasses = (): string => `${styles.header} ${isMenuOpen ? styles.active : ""} ${scrollY > 66 ? styles.fixed : ""} ${scrollY > 100 ? styles.scrolled : ""}`;
+
+  useEffect(() => {
+    const bodyElement: HTMLElement = document.body;
+
+    if (isMenuOpen)bodyElement.style.overflow = "hidden";
+    else bodyElement.style.overflow = "visible";
+  }, [isMenuOpen]);
+
   return (
-    <header className={!isMenuOpen ? styles.header : `${styles.header} ${styles.active}`}>
+    <header className={handleHeaderClasses()}>
       <div className={!isMenuOpen ? styles.background : `${styles.background} ${styles.active}`} />
 
       <Link href="/" passHref>
@@ -22,8 +35,22 @@ const Header = ({ isMenuOpen, setIsMenuOpen }: Props): JSX.Element => {
 
       <div className={styles.container}>
         <div className={!isMenuOpen ? styles.links : `${styles.links} ${styles.active}`}>
+          <Link href="/specializations" passHref>
+            <a className={styles.link}>Specializations</a>
+          </Link>
+
+          <Link href="/services" passHref>
+            <a className={styles.link}>Services</a>
+          </Link>
+
+          <Link href="/prices" passHref>
+            <a className={styles.link}>Prices</a>
+          </Link>
+        </div>
+
+        <div className={!isMenuOpen ? styles.links : `${styles.links} ${styles.active}`}>
           <Link href="/login" passHref>
-            <a >Log in</a>
+            <a>Log in</a>
           </Link>
 
           <Link href="/register" passHref>

@@ -11,18 +11,13 @@ const services: string[] = ["weight issues", "fertility", "sleep issues", "anxie
 const slideshowVariants = {
   initial: {
     y: "-150%",
-    opacity: 0,
-    transition: {
-      duration: 1,
-      ease: "easeInOut",
-      stiffness: 0
-    }
+    opacity: 0
   },
   animate: {
     y: 0,
     opacity: 1,
     transition: {
-      duration: 1,
+      duration: 0.5,
       ease: "easeInOut",
       stiffness: 0
     }
@@ -31,7 +26,7 @@ const slideshowVariants = {
     y: "150%",
     opacity: 0,
     transition: {
-      duration: 1,
+      duration: 0.5,
       ease: "easeInOut",
       stiffness: 0
     }
@@ -48,7 +43,7 @@ const SectionTwo = (): JSX.Element => {
   
         if (serviceIndex === services.length - 1) setCurrentService(services[0]);
         else setCurrentService(services[serviceIndex + 1]);
-      }, 2500);
+      }, 1500);
     }
 
     handleSlideshow();
@@ -78,7 +73,7 @@ const SectionTwo = (): JSX.Element => {
       </div>
 
       <div className={styles.row}>
-        <div className={styles.title}>A membership designed around you</div>
+        <div className={styles.subtitle}>A membership designed around you</div>
         <p className={styles.paragraph}>We work with your insurance just like a typical doctor’s office, but we offer so much more.</p>
 
         <Link href="/prices" passHref>

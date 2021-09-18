@@ -1,9 +1,10 @@
 import Link from "next/link";
-import { useState, Dispatch, SetStateAction } from "react";
+import { useState, Dispatch, SetStateAction, useEffect } from "react";
 import { BiSearch } from "react-icons/bi";
 import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
 
 import styles from "../styles/components/Menu.module.scss";
+import useScroll from "../hooks/useScroll";
 
 type Props = {
   isMenuOpen: boolean;
@@ -45,8 +46,13 @@ const Menu = ({ isMenuOpen, setIsMenuOpen }: Props): JSX.Element => {
     setIsMenuOpen(false);
   }
 
+  const { scrollY } = useScroll();
+  useEffect(() => {}, [scrollY]);
+
   return (
-    <div className={!isMenuOpen ? styles.menu : `${styles.menu} ${styles.active}`} aria-hidden={!isMenuOpen}>
+    <div className={!isMenuOpen ? styles.menu : `${styles.menu} ${styles.active}`} aria-hidden={!isMenuOpen}
+      style={{ padding: `calc(66px + ${66 - scrollY > 0 ? 66 - scrollY : 0}px + 1rem) 7vw 0` }}
+    >
       <AnimateSharedLayout>
         <div className={styles.links}>
           <Link href="/specializations" passHref>
