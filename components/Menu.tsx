@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { useState, Dispatch, SetStateAction, useEffect } from "react";
+import { useState, useEffect, Dispatch, SetStateAction } from "react";
 import { BiSearch } from "react-icons/bi";
-import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 import styles from "../styles/components/Menu.module.scss";
 import useScroll from "../hooks/useScroll";
@@ -41,7 +41,7 @@ const dropdownVariants = {
 const Menu = ({ isMenuOpen, setIsMenuOpen }: Props): JSX.Element => {
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState<boolean>(false);
 
-  const handleLinkClick = (): void => {
+  const handleLink = (): void => {
     setIsServicesDropdownOpen(false);
     setIsMenuOpen(false);
   }
@@ -53,57 +53,37 @@ const Menu = ({ isMenuOpen, setIsMenuOpen }: Props): JSX.Element => {
     <div className={!isMenuOpen ? styles.menu : `${styles.menu} ${styles.active}`} aria-hidden={!isMenuOpen}
       style={{ padding: `calc(66px + ${66 - scrollY > 0 ? 66 - scrollY : 0}px + 1rem) 7vw 0` }}
     >
-      <AnimateSharedLayout>
-        <div className={styles.links}>
-          <Link href="/specializations" passHref>
-            <a className={styles.link} onClick={handleLinkClick}>Specializations</a>
-          </Link>
+      <div className={styles.links}>
+        <Link href="/about-us" passHref><a className={styles.link} onClick={handleLink}>About us</a></Link>
 
-          <div className={styles.dropdown}>
-            <h3 className={styles.link} onClick={() => setIsServicesDropdownOpen(!isServicesDropdownOpen)}>Services</h3>
+        <div className={styles.dropdown}>
+          <h3 className={styles.link} onClick={() => setIsServicesDropdownOpen(!isServicesDropdownOpen)}>Services</h3>
 
-            <AnimatePresence>
-              {isServicesDropdownOpen && (
-                <motion.ul className={styles.container} aria-hidden={!isServicesDropdownOpen} layout initial="initial" animate="animate" exit="exit" variants={dropdownVariants}>
-                  <Link href="/services" passHref>
-                    <li className={styles.link} onClick={handleLinkClick}>Wellness and prevention</li>
-                  </Link>
-
-                  <Link href="/services" passHref>
-                    <li className={styles.link} onClick={handleLinkClick}>Everyday care</li>
-                  </Link>
-
-                  <Link href="/services" passHref>
-                    <li className={styles.link} onClick={handleLinkClick}>Chronic conditions</li>
-                  </Link>
-
-                  <Link href="/services" passHref>
-                    <li className={styles.link} onClick={handleLinkClick}>Mental health</li>
-                  </Link>
-                </motion.ul>
-              )}
-            </AnimatePresence>
-          </div>
-
-          <Link href="/prices" passHref>
-            <motion.a className={styles.link} layout onClick={handleLinkClick}>Prices</motion.a>
-          </Link>
+          <AnimatePresence>
+            {isServicesDropdownOpen && (
+              <motion.ul className={styles.container} aria-hidden={!isServicesDropdownOpen} initial="initial" animate="animate" exit="exit" variants={dropdownVariants}>
+                <Link href="/services" passHref><li className={styles.link} onClick={handleLink}>Cardiology</li></Link>
+                <Link href="/services" passHref><li className={styles.link} onClick={handleLink}>Oncology</li></Link>
+                <Link href="/services" passHref><li className={styles.link} onClick={handleLink}>Gastroenterology</li></Link>
+                <Link href="/services" passHref><li className={styles.link} onClick={handleLink}>Obstetrics and Gynaecology</li></Link>
+                <Link href="/services" passHref><li className={styles.link} onClick={handleLink}>Orthopaedics</li></Link>
+                <Link href="/services" passHref><li className={styles.link} onClick={handleLink}>Ophthalmology</li></Link>
+                <Link href="/services" passHref><li className={styles.link} onClick={handleLink}>Other Services</li></Link>
+              </motion.ul>
+            )}
+          </AnimatePresence>
         </div>
 
-        <motion.div className={styles.buttons} layout>
-          <Link href="/search" passHref>
-            <a className={styles.search}><BiSearch /></a>
-          </Link>
+        <Link href="/hospitals" passHref><a className={styles.link} onClick={handleLink}>Hospitals</a></Link>
+        <Link href="/prices" passHref><a className={styles.link} onClick={handleLink}>Prices</a></Link>
+        <Link href="/contact" passHref><a className={styles.link} onClick={handleLink}>Contact</a></Link>
+      </div>
 
-          <Link href="/login" passHref>
-            <a className={styles.login}>Log in</a>
-          </Link>
-
-          <Link href="/register" passHref>
-            <a className={styles.register}>Sign up</a>
-          </Link>
-        </motion.div>
-      </AnimateSharedLayout>
+      <div className={styles.buttons}>
+        <Link href="/search" passHref><a className={styles.search}><BiSearch /></a></Link>
+        <Link href="/login" passHref><a className={styles.login}>Log in</a></Link>
+        <Link href="/register" passHref><a className={styles.register}>Sign up</a></Link>
+      </div>
     </div>
   );
 }
