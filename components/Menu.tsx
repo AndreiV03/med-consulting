@@ -51,7 +51,7 @@ const Menu = ({ isMenuOpen, setIsMenuOpen }: Props): JSX.Element => {
 
   return (
     <div className={!isMenuOpen ? styles.menu : `${styles.menu} ${styles.active}`} aria-hidden={!isMenuOpen}
-      style={{ padding: `calc(66px + ${66 - scrollY > 0 ? 66 - scrollY : 0}px + 1rem) 7vw 0` }}
+      style={{ padding: `calc(66px + ${66 - scrollY > 0 ? 66 - scrollY : 0}px + 2rem) 7vw 0` }}
     >
       <div className={styles.links}>
         <Link href="/about-us" passHref><a className={styles.link} onClick={handleLink}>About us</a></Link>
