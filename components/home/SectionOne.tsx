@@ -8,7 +8,7 @@ const SectionOne = (): JSX.Element => {
   return (
     <div className={styles.hero_section}>
       <div className={styles.column}>
-        <h1 className={styles.title}>Asistenta și consiliere pentru obținerea tratamentelor personalizate din Viena.</h1>
+        <h1 className={styles.title}>Asistenta pentru obținerea tratamentelor personalizate în clinicile din Viena</h1>
         <p>Same/next-day primary care designed around you and your life. Most insurance accepted.</p>
 
         <div className={styles.buttons}>
