@@ -15,153 +15,134 @@
     box-shadow: 0 0 8px rgb(0 0 0 / 16%);
   }
 
-  &.active {
-    box-shadow: 0px 1px 0px 0px hsl(271, 81%, 25%);
-  }
-
   &.fixed {
     position: fixed;
     top: 0;
   }
-}
 
-.background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: var(--blue);
-  opacity: 0;
-  transition: 100ms ease-in;
-  z-index: -1;
-
-  &.active {
-    opacity: 1;
-  }
-}
-
-.logo {
-  height: 100%;
-  display: flex;
-  align-items: center;
-
-  svg {
-    width: 160px;
-  }
-
-  path {
-    fill: var(--blue);
-    transition: 100ms ease-in;
-  }
-
-  rect {
-    fill: var(--green);
-  }
-
-  &.active {
-    path {
-      fill: var(--background);
-    }
-  }
-}
-
-.container {
-  display: flex;
-  align-items: center;
-}
-
-.links {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  position: relative;
-
-  &:first-child {
-    margin-right: 1.5rem;
-  }
-
-  &:first-child::before {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    background: var(--line);
-    width: 1px;
-    height: 36px;
-  }
-
-  a {
-    font-size: 0.875rem;
-    font-weight: 500;
-    text-decoration: none;
-    color: var(--blue);
-    transition: 100ms ease-in;
-  }
-
-  &.active {
-    a {
-      color: var(--background);
-    }
-  }
-
-  .link {
-    margin-right: 1.5rem;
-  }
-
-  .register {
-    color: var(--background);
-    background: var(--blue);
-    padding: 1em 1.75em;
-    border-radius: 2em;
-    margin: 0 1.5em;
-    transition: 100ms ease-in;
-
-    &:hover {
-      background: var(--dark-blue);
-    }
-  }
-
-  .search {
-    font-size: 1.5rem;
+  .logo {
+    height: 100%;
     display: flex;
     align-items: center;
-  }
-}
 
-.button {
-  margin-left: 1.5rem;
-  display: flex;
-  align-items: center;
+    svg {
+      width: 160px;
 
-  svg {
-    width: 20px;
-    height: 16px;
-    overflow: visible;
+      path {
+        fill: var(--accent);
+        transition: 100ms ease-in;
+      }
 
-    line {
-      stroke: var(--blue);
-      stroke-width: 2px;
-      transition: 100ms ease-in;
+      rect {
+        fill: var(--secondary);
+      }
+    }
+
+    &.menu_active {
+      svg path {
+        fill: var(--background);
+      }
     }
   }
 
-  &.active {
-    line {
-      stroke: var(--background);
+  .container {
+    display: flex;
+    align-items: center;
+
+    .links {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      &:first-child {
+        margin-right: 1.5rem;
+      }
+
+      &:first-child::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background: var(--line);
+        width: 1px;
+        height: 36px;
+      }
+
+      a {
+        font-size: 0.875rem;
+        font-weight: 500;
+        text-decoration: none;
+        color: var(--accent);
+        transition: 100ms ease-in;
+      }
+
+      &.menu_active {
+        a {
+          color: var(--background);
+        }
+      }
+
+      .link {
+        margin-right: 1.5rem;
+      }
+
+      .register {
+        color: var(--background);
+        background: var(--accent);
+        padding: 1em 1.75em;
+        border-radius: 2em;
+        margin: 0 1.5em;
+        transition: 100ms ease-in;
+
+        &:hover {
+          background: var(--dark-accent);
+        }
+      }
+
+      .search {
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  .button {
+    margin-left: 1.5rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    svg {
+      width: 20px;
+      height: 16px;
+      overflow: visible;
+
+      line {
+        stroke: var(--accent);
+        stroke-width: 2px;
+        transition: 100ms ease-in;
+      }
+    }
+
+    &.menu_active {
+      svg line {
+        stroke: var(--background);
+      }
     }
   }
 }
 
 @media screen and (max-width: 768px) {
-  .links {
+  .header .container .links {
     display: none;
   }
 }
 
 @media screen and (max-width: 1165px) {
-  .links:first-child {
+  .header .container .links:first-child {
     display: none;
   }
 }

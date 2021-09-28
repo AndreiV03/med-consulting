@@ -7,7 +7,7 @@
     .title {
       font-size: 3rem;
       font-weight: 700;
-      color: var(--blue);
+      color: var(--accent);
       line-height: 1.1;
       margin-bottom: 2rem;
     }
@@ -15,7 +15,7 @@
     p {
       font-size: 1rem;
       font-weight: 400;
-      color: var(--blue);
+      color: var(--accent);
       line-height: 1.4;
     }
 
@@ -23,7 +23,7 @@
       font-size: 1rem;
       font-weight: 500;
       color: var(--background);
-      background: var(--blue);
+      background: var(--accent);
       border-radius: 2em;
       width: fit-content;
       padding: 1em 2em;
@@ -34,14 +34,14 @@
       white-space: nowrap;
 
       &:hover {
-        background: var(--dark-blue);
+        background: var(--dark-accent);
       }
     }
 
     .button_outline {
       font-size: 1rem;
       font-weight: 500;
-      color: var(--blue);
+      color: var(--accent);
       border-radius: 2em;
       border: 1px solid var(--line);
       width: fit-content;
@@ -53,7 +53,7 @@
     .link {
       display: flex;
       align-items: center;
-      color: var(--blue);
+      color: var(--accent);
       text-decoration: none;
       margin-top: 1rem;
 
@@ -75,7 +75,7 @@
   }
 
   .column:last-child {
-    background: var(--light-blue);
+    background: var(--light-accent);
     width: calc(100% + 14vw);
     height: 65vw;
     margin: calc(10vw + 3rem) -7vw 0;
@@ -120,13 +120,13 @@
   .title {
     font-size: 3rem;
     font-weight: 700;
-    color: var(--blue);
+    color: var(--accent);
   }
 
   .subtitle {
     font-size: 2.25rem;
     font-weight: 700;
-    color: var(--blue);
+    color: var(--accent);
   }
 
   .slideshow {
@@ -138,7 +138,7 @@
     h3 {
       font-size: 3rem;
       font-weight: 700;
-      color: var(--green);
+      color: var(--secondary);
       position: absolute;
       width: 100%;
     }
@@ -148,7 +148,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--blue);
+    color: var(--accent);
     text-decoration: none;
     width: fit-content;
     margin: 0.5rem auto 0;
@@ -172,7 +172,7 @@
   .paragraph {
     font-size: 1rem;
     font-weight: 400;
-    color: var(--blue);
+    color: var(--accent);
     line-height: 1.4;
     margin-top: 1rem;
   }
