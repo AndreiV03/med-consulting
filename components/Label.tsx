@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { RiArrowRightSLine } from "react-icons/ri";
 
-import styles from "../styles/components/Label.module.scss";
+import styles from "../styles/components/label.module.scss";
 
 const Label = (): JSX.Element => {
   return (

@@ -1,53 +1,25 @@
 import Link from "next/link";
-import { useState, useEffect, Dispatch, SetStateAction } from "react";
+import { useState, Dispatch, SetStateAction } from "react";
 import { BiSearch } from "react-icons/bi";
 import { motion, AnimatePresence } from "framer-motion";
 
-import styles from "../styles/components/Menu.module.scss";
+import styles from "../styles/components/menu.module.scss";
 import useScroll from "../hooks/useScroll";
+import { menuDropdownVariants } from "../data/variants";
 
-type Props = {
+interface Props {
   isMenuOpen: boolean;
   setIsMenuOpen: Dispatch<SetStateAction<boolean>>;
 };
 
-const dropdownVariants = {
-  initial: {
-    height: 0,
-    transition: {
-      duration: 0.2,
-      ease: "easeIn",
-      stiffness: 0
-    }
-  }, 
-  animate: {
-    height: "auto",
-    transition: {
-      duration: 0.2,
-      ease: "easeIn",
-      stiffness: 0
-    }
-  },
-  exit: {
-    height: 0,
-    transition: {
-      duration: 0.2,
-      ease: "easeIn",
-      stiffness: 0
-    }
-  }
-};
-
 const Menu = ({ isMenuOpen, setIsMenuOpen }: Props): JSX.Element => {
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState<boolean>(false);
+  const { scrollY } = useScroll();
 
   const handleLink = (): void => {
     setIsServicesDropdownOpen(false);
     setIsMenuOpen(false);
   }
-
-  const { scrollY } = useScroll();
-  useEffect(() => {}, [scrollY]);
 
   return (
     <div className={!isMenuOpen ? styles.menu : `${styles.menu} ${styles.active}`} aria-hidden={!isMenuOpen}
@@ -62,7 +34,7 @@ const Menu = ({ isMenuOpen, setIsMenuOpen }: Props): JSX.Element => {
 
             <AnimatePresence>
               {isServicesDropdownOpen && (
-                <motion.ul className={styles.container} aria-hidden={!isServicesDropdownOpen} initial="initial" animate="animate" exit="exit" variants={dropdownVariants}>
+                <motion.ul className={styles.container} aria-hidden={!isServicesDropdownOpen} initial="initial" animate="animate" exit="exit" variants={menuDropdownVariants}>
                   <Link href="/services" passHref><li className={styles.link} onClick={handleLink}>Cardiology</li></Link>
                   <Link href="/services" passHref><li className={styles.link} onClick={handleLink}>Oncology</li></Link>
                   <Link href="/services" passHref><li className={styles.link} onClick={handleLink}>Gastroenterology</li></Link>
@@ -81,10 +53,10 @@ const Menu = ({ isMenuOpen, setIsMenuOpen }: Props): JSX.Element => {
         </div>
 
         <div className={styles.buttons}>
-          <Link href="/search" passHref><a className={styles.search}><BiSearch /></a></Link>
-          <Link href="/account" passHref><a className={styles.mini_link}>Account</a></Link>
-          <Link href="/login" passHref><a className={styles.link}>Log in</a></Link>
-          <Link href="/register" passHref><a className={styles.link}>Sign up</a></Link>
+          <Link href="/search" passHref><a className={styles.search} onClick={handleLink}><BiSearch /></a></Link>
+          <Link href="/account" passHref><a className={styles.mini_link} onClick={handleLink}>Account</a></Link>
+          <Link href="/login" passHref><a className={styles.link} onClick={handleLink}>Log in</a></Link>
+          <Link href="/register" passHref><a className={styles.link} onClick={handleLink}>Sign up</a></Link>
         </div>
       </div>
     </div>

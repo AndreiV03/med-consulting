@@ -1,0 +1,162 @@
+.footer {
+  width: 100%;
+  padding: 0 7vw 2rem;
+  background: var(--accent);
+  color: var(--background);
+
+  .top_section {
+    padding: 5rem 0;
+    text-align: center;
+
+    h2 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    .button_fill {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--accent);
+      background: var(--background);
+      border-radius: 2em;
+      width: fit-content;
+      padding: 1em 3em;
+      margin: 1.5rem auto 0;
+      cursor: pointer;
+      transition: 100ms ease-in;
+      height: fit-content;
+      white-space: nowrap;
+
+      &:hover {
+        background: var(--dark-accent);
+      }
+
+      &:first-of-type {
+        background: var(--secondary);
+        color: var(--foreground);
+      }
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+
+    .links {
+      display: flex;
+      flex-direction: column;
+
+      .link {
+        font-size: 18px;
+        font-weight: 500;
+        color: var(--background);
+        text-decoration: none;
+        width: fit-content;
+
+        &:not(:last-child) {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+
+    .social_media {
+      display: flex;
+      margin-top: 1.5rem;
+
+      .link {
+        font-size: 1.5rem;
+        color: var(--background);
+
+        &:not(:last-child) {
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+
+  .bottom_section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+
+      .link {
+        font-size: 14px;
+        font-weight: 400;
+        color: var(--background);
+        text-decoration: none;
+        width: fit-content;
+        margin: 0 1rem 0.75rem 0;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      font-weight: 400;
+      margin-top: 0.75rem;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    .top_section {
+      h2 {
+        font-size: 3.75rem;
+        max-width: 750px;
+        margin: 0 auto;
+      }
+
+      .buttons {
+        display: flex;
+        width: fit-content;
+        margin: 2rem auto 0;
+
+        .button_fill {
+          margin: 0;
+
+          &:first-of-type {
+            margin-right: 1.5rem;
+          }
+        }
+      }
+    }
+
+    .content {
+      flex-direction: row;
+      justify-content: space-between;
+
+      .links {
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 500px;
+
+        .link:not(:last-child) {
+          margin: 0 2rem 2rem 0;
+        }
+      }
+
+      .social_media {
+        margin: 0;
+      }
+    }
+
+    .bottom_section {
+      margin-top: 4rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1262px) {
+  .footer {
+    .top_section {
+      h2 {
+        font-size: 5.5rem;
+        max-width: 900px;
+      }
+    }
+  }
+}
