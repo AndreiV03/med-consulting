@@ -5,7 +5,6 @@ import { BiSearch } from "react-icons/bi";
 import styles from "../styles/components/Header.module.scss";
 import useScroll from "../hooks/useScroll";
 import Logo from "../assets/Logo";
-import MenuButton from "./MenuButton";
 
 type Props = {
   isMenuOpen: boolean;
@@ -44,7 +43,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen }: Props): JSX.Element => {
         </div>
 
         <div className={!isMenuOpen ? styles.button : `${styles.button} ${styles.menu_active}`} onClick={() => setIsMenuOpen(!isMenuOpen)}>
-          <MenuButton isMenuOpen={isMenuOpen} />
+          <div className={styles.hamburger} />
         </div>
       </div>
     </header>
