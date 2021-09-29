@@ -85,7 +85,7 @@ const Home: NextPage = () => {
       <div className={styles.items}>
         <h3 className={styles.subtitle}>A membership designed around you</h3>
         <p>
-          <span>We work with your insurance just like a typical doctor’s office, but we offer so much more.</span>
+          <span>We work with your insurance just like a typical doctor’s office, but we offer much more.</span>
 
           <Link href="/prices" passHref>
             <a className={styles.link}>
