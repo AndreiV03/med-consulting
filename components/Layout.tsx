@@ -16,10 +16,6 @@ const Layout = ({ children }: Props): JSX.Element => {
   
   return (
     <>
-      <Helmet>
-        <body className={isMenuOpen ? styles.menu_active : ""} />
-      </Helmet>
-
       <Label />
       <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <Menu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
