@@ -1,0 +1,43 @@
+.hero_section {
+  background-image: url("https://www.onemedical.com/media/images/services-hero_recut.original.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  width: 100vw;
+  height: 100vh;
+  transform: translate(-7vw, -66px);
+  padding: 0 7vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--background);
+
+  .title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 1rem 0 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .button {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--accent);
+    background: var(--background);
+    border-radius: 2em;
+    width: fit-content;
+    padding: 1em 2em;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: 100ms ease-in;
+    height: fit-content;
+    white-space: nowrap;
+
+    &:hover {
+      background: var(--dark-accent);
+    }
+  }
+}

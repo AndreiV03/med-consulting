@@ -30,17 +30,17 @@ const Home: NextPage = () => {
     <>
       <div className={styles.hero_section}>
         <div className={styles.column}>
-          <h1 className={styles.title}>Asistenta pentru obținerea tratamentelor personalizate în clinicile din Viena</h1>
-          <p>Same/next-day primary care designed around you and your life. Most insurance accepted.</p>
+          <h1 className={styles.title}>Sprijin pentru obținerea tratamentelor personalizate în clinicile din Viena</h1>
+          <p>Oferim asistență în majoritatea clinicilor din Austria.</p>
 
           <div className={styles.buttons}>
-            <div className={styles.button_fill}>Sign up today</div>
-            <div className={styles.button_outline}>Gift a membership</div>
+            <div className={styles.button_fill}>Depunere dosar</div>
+            <div className={styles.button_outline}>Trimite un mesaj</div>
           </div>
 
           <Link href="/" passHref>
             <a className={styles.link}>
-              <span>Sponsored membership? Click here</span>
+              <span>Evaluare diagnostic gratuit</span>
               <IoIosArrowForward />
             </a>
           </Link>
