@@ -22,15 +22,16 @@ const Header = ({ isMenuOpen, setIsMenuOpen }: Props): JSX.Element => {
 
       <div className={styles.container}>
         <div className={!isMenuOpen ? styles.links : `${styles.links} ${styles.menu_active}`}>
-          <Link href="/services" passHref><a className={styles.link}>Services</a></Link>
-          <Link href="/hospitals" passHref><a className={styles.link}>Hospitals</a></Link>
-          <Link href="/prices" passHref><a className={styles.link}>Prices</a></Link>
+          <Link href="/about-us" passHref><a className={styles.link}>Despre noi</a></Link>
+          <Link href="/services" passHref><a className={styles.link}>Servicii</a></Link>
+          <Link href="/hospitals" passHref><a className={styles.link}>Spitale</a></Link>
+          <Link href="/prices" passHref><a className={styles.link}>Prețuri</a></Link>
           <Link href="/contact" passHref><a className={styles.link}>Contact</a></Link>
         </div>
 
         <div className={!isMenuOpen ? styles.links : `${styles.links} ${styles.menu_active}`}>
-          <Link href="/login" passHref><a>Log in</a></Link>
-          <Link href="/register" passHref><a className={styles.register}>Sign up</a></Link>
+          <Link href="/login" passHref><a>Autentificare</a></Link>
+          <Link href="/register" passHref><a className={styles.register}>Înregistrare</a></Link>
           <Link href="/search" passHref><a className={styles.search}><BiSearch /></a></Link>
         </div>
 
