@@ -8,7 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import styles from "../styles/pages/home.module.scss";
 import { slideshowVariants } from "../data/variants";
 
-const services: string[] = ["weight issues", "fertility", "sleep issues", "anxiety", "diabetes", "back pain", "headaches", "allergies"];
+const services: string[] = ["chirurgie", "ortopedie", "cardiologie", "oncologie", "oftalmologie", "radiologie", "inflirtații"];
 
 const Home: NextPage = () => {
   const [currentService, setCurrentService] = useState<string>(services[0]);
@@ -62,7 +62,7 @@ const Home: NextPage = () => {
       </div>
 
       <div className={styles.slideshow}>
-        <h2 className={styles.title}>Get care today for</h2>
+        <h2 className={styles.title}>Specializările noastre</h2>
 
         <div className={styles.container}>
           {services.map(service => (
@@ -76,14 +76,14 @@ const Home: NextPage = () => {
 
         <Link href="/services" passHref>
           <a className={styles.link}>
-            <span>See all our services</span>
+            <span>Vezi toate serviciile noastre</span>
             <IoIosArrowForward />
           </a>
         </Link>
       </div>
 
       <div className={styles.items}>
-        <h3 className={styles.subtitle}>A membership designed around you</h3>
+        <h3 className={styles.subtitle}>Inițiază astăzi o programare cu medconsulting</h3>
         <p>
           <span>We work with your insurance just like a typical doctor’s office, but we offer so much more.</span>
 
@@ -127,8 +127,8 @@ const Home: NextPage = () => {
           </div>
         </div>
 
-        <h4 className={styles.caption}>Membership costs only $199/year. Learn more about membership</h4>
-        <div className={styles.button_fill}>Join today</div>
+        <h4 className={styles.caption}>Interesat de costuri</h4>
+        <div className={styles.button_fill}>Prețurile noastre</div>
       </div>
     </>
   );
