@@ -7,7 +7,7 @@ const Label = (): JSX.Element => {
   return (
     <div className={styles.label}>
       <div>
-        Evaluare dosar medical fara costuri.
+        Evaluare dosar medical fără costuri.
 
         <Link href="/" passHref>
           <a className={styles.link}>
