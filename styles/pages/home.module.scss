@@ -274,10 +274,10 @@
 
 @media screen and (min-width: 768px) {
   .hero_section {
-    height: 850px;
+    height: 800px;
 
     .column:first-child {
-      padding-top: 2rem;
+      padding-top: 3rem;
       max-width: 45%;
 
       .title {
@@ -294,13 +294,13 @@
       top: 0;
       right: 0;
       width: 45vw;
-      height: 900px;
+      max-height: 800px;
       margin: 66px 0 0;
 
       .box:first-child {
         width: 33vw;
         height: 40vw;
-        top: 152px;
+        top: 20%;
         right: 0;
         left: unset;
       }

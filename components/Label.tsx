@@ -7,14 +7,14 @@ const Label = (): JSX.Element => {
   return (
     <div className={styles.label}>
       <div>
-        Care whenever you need it, in person or in your PJs.
+        Evaluare dosar medical fara costuri.
 
-          <Link href="/" passHref>
-            <a className={styles.link}>
-              <span>Learn more</span>
-              <RiArrowRightSLine />
-            </a>
-          </Link>
+        <Link href="/" passHref>
+          <a className={styles.link}>
+            <span>Află mai multe</span>
+            <RiArrowRightSLine />
+          </a>
+        </Link>
       </div>
     </div>
   );
