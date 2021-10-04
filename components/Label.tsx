@@ -1,21 +1,21 @@
 import Link from "next/link";
-import { RiArrowRightSLine } from "react-icons/ri";
+import { IoIosArrowForward } from "react-icons/io";
 
 import styles from "../styles/components/label.module.scss";
 
 const Label = (): JSX.Element => {
   return (
     <div className={styles.label}>
-      <div>
-        Evaluare dosar medical fără costuri.
+      <p>
+        <span>Evaluare dosar medical fără costuri.</span>
 
-        <Link href="/" passHref>
+        <Link href="/prices" passHref>
           <a className={styles.link}>
             <span>Află mai multe</span>
-            <RiArrowRightSLine />
+            <IoIosArrowForward />
           </a>
         </Link>
-      </div>
+      </p>
     </div>
   );
 }

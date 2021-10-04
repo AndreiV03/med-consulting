@@ -3,32 +3,45 @@
   height: 66px;
   padding: 0 7vw;
   background: var(--secondary);
-  color: var(--foreground);
-  font-weight: 500;
-  font-size: 1rem;
-  line-height: 1.4;
-  text-align: center;
   position: relative;
   z-index: 20;
   display: flex;
   align-items: center;
   justify-content: center;
 
-  .link {
-    display: inline-flex;
-    align-items: center;
-    text-decoration: none;
+  p {
+    font-size: 1rem;
+    font-weight: 400;
     color: var(--background);
-    margin-left: 0.25rem;
+    line-height: 1.5;
+    text-align: center;
 
-    svg {
-      font-size: 1.2rem;
-      cursor: pointer;
-      transition: 150ms ease-in;
+    & > span {
+      margin-right: 0.3rem;
     }
 
-    &:hover > svg {
-      transform: translateX(0.25rem);
+    .link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: var(--foreground);
+      width: fit-content;
+
+      span {
+        font-size: 1rem;
+        font-weight: 600;
+      }
+
+      svg {
+        font-size: 1rem;
+        cursor: pointer;
+        transition: 150ms ease-in;
+      }
+
+      &:hover > svg {
+        transform: translateX(0.25rem);
+      }
     }
   }
 }
