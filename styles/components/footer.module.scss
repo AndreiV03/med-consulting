@@ -4,7 +4,7 @@
   background: var(--accent);
   color: var(--background);
 
-  .top_section {
+  .prefooter {
     padding: 5rem 0;
     text-align: center;
 
@@ -103,7 +103,7 @@
 
 @media screen and (min-width: 768px) {
   .footer {
-    .top_section {
+    .prefooter {
       h2 {
         font-size: 3.75rem;
         max-width: 750px;
@@ -152,7 +152,7 @@
 
 @media screen and (min-width: 1262px) {
   .footer {
-    .top_section {
+    .prefooter {
       h2 {
         font-size: 5.5rem;
         max-width: 900px;

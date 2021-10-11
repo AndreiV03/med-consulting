@@ -16,7 +16,7 @@ const Menu = ({ isMenuOpen, setIsMenuOpen }: Props): JSX.Element => {
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState<boolean>(false);
   const { scrollY } = useScroll();
 
-  const handleLink = (): void => {
+  const handleLink = () => {
     setIsServicesDropdownOpen(false);
     setIsMenuOpen(false);
   }

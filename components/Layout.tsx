@@ -1,5 +1,5 @@
 import { useState, ReactNode } from "react";
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 import styles from "../styles/components/layout.module.scss";
 import Label from "./Label";
@@ -15,7 +15,7 @@ const Layout = ({ children }: Props): JSX.Element => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   
   return (
-    <>
+    <HelmetProvider>
       <Helmet>
         <body className={isMenuOpen ? styles.menu_active : ""} />
       </Helmet>
@@ -25,7 +25,7 @@ const Layout = ({ children }: Props): JSX.Element => {
       <Menu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <div className={styles.page}>{children}</div>
       <Footer />
-    </>
+    </HelmetProvider>
   );
 }
 

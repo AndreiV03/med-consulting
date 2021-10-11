@@ -19,7 +19,7 @@ export default function useScroll() {
     }
 
   const [state, setState] = useState<StateObject>(() => {
-    const bodyOffset: DOMRect = document.body.getBoundingClientRect();
+    const bodyOffset = document.body.getBoundingClientRect();
 
     return {
       scrollX: bodyOffset.left,
@@ -31,7 +31,7 @@ export default function useScroll() {
 
   const handleScrollEvent = useCallback<CallbackFunction>(() => {
     setState((prevState: StateObject) => {
-      const bodyOffset: DOMRect = document.body.getBoundingClientRect();
+      const bodyOffset = document.body.getBoundingClientRect();
 
       return {
         scrollX: bodyOffset.left,

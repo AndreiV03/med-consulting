@@ -3,17 +3,23 @@ import { RiFacebookFill, RiTwitterFill, RiYoutubeFill, RiInstagramFill } from "r
 
 import styles from "../styles/components/footer.module.scss";
 
+export const Prefooter = (): JSX.Element => {
+  return (
+    <div className={styles.prefooter}>
+      <h2>Intră în contact direct</h2>
+      
+      <div className={styles.buttons}>
+        <div className={styles.button_fill}>Contactează-ne prin Whatsapp</div>
+        <div className={styles.button_fill}>Email</div>
+      </div>
+    </div>
+  );
+}
+
 const Footer = (): JSX.Element => {
   return (
     <footer className={styles.footer}>
-      <div className={styles.top_section}>
-        <h2>Intră în contact direct</h2>
-        
-        <div className={styles.buttons}>
-          <div className={styles.button_fill}>Contactează-ne prin Whatsapp</div>
-          <div className={styles.button_fill}>Email</div>
-        </div>
-      </div>
+      <Prefooter />
 
       <div className={styles.content}>
         <div className={styles.links}>

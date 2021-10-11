@@ -8,15 +8,15 @@ import { motion, AnimatePresence } from "framer-motion";
 import styles from "../styles/pages/home.module.scss";
 import { slideshowVariants } from "../data/variants";
 
-const services: string[] = ["chirurgie", "ortopedie", "cardiologie", "oncologie", "oftalmologie", "radiologie", "inflirtații"];
+const services = ["chirurgie", "ortopedie", "cardiologie", "oncologie", "oftalmologie", "radiologie", "inflirtații"];
 
 const Home: NextPage = () => {
   const [currentService, setCurrentService] = useState<string>(services[0]);
 
   useEffect(() => {
-    const handleSlideshow = (): void => {
+    const handleSlideshow = () => {
       setTimeout(() => {
-        const serviceIndex: number = services.indexOf(currentService);
+        const serviceIndex = services.indexOf(currentService);
   
         if (serviceIndex === services.length - 1) setCurrentService(services[0]);
         else setCurrentService(services[serviceIndex + 1]);

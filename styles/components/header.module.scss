@@ -10,9 +10,44 @@
   z-index: 15;
   transition: background 100ms ease-in, box-shadow 100ms ease-in;
 
+  &.background_purple {
+    background: var(--accent);
+  }
+
   &.scrolled {
     background: var(--background);
     box-shadow: 0 0 8px rgb(0 0 0 / 16%);
+  }
+
+  &.menu_active,
+  &.background_purple:not(.scrolled) {
+    .logo svg {
+      path {
+        fill: var(--background);
+      }
+    }
+
+    .container .links {
+      a {
+        color: var(--background);
+      }
+    }
+
+    .button {
+      .hamburger {
+        background: transparent;
+
+        &::before {
+          transform: rotate(45deg);
+          background: var(--background);
+        }
+
+        &::after {
+          transform: rotate(-45deg);
+          background: var(--background);
+        }
+      }
+    }
   }
 
   &.menu_active.scrolled {
@@ -29,6 +64,7 @@
     height: 100%;
     display: flex;
     align-items: center;
+    cursor: pointer;
 
     svg {
       width: 160px;
@@ -40,12 +76,6 @@
 
       rect {
         fill: var(--secondary);
-      }
-    }
-
-    &.menu_active {
-      svg path {
-        fill: var(--background);
       }
     }
   }
@@ -81,12 +111,6 @@
         text-decoration: none;
         color: var(--accent);
         transition: 100ms ease-in;
-      }
-
-      &.menu_active {
-        a {
-          color: var(--background);
-        }
       }
 
       .link {
@@ -146,22 +170,6 @@
 
       &::after {
         transform: translateY(8px);
-      }
-    }
-
-    &.menu_active {
-      .hamburger {
-        background: transparent;
-
-        &::before {
-          transform: rotate(45deg);
-          background: var(--background);
-        }
-
-        &::after {
-          transform: rotate(-45deg);
-          background: var(--background);
-        }
       }
     }
   }
