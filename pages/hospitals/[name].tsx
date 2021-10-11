@@ -73,7 +73,7 @@ const Hospital: NextPage<PageProps> = ({ name, coordinates }) => {
           options={{ }}
           onChange={() => {}}
         >
-          <div className={styles.marker} lat={coordinates.lat} lng={coordinates.lng}>
+          <div className={styles.marker} {...coordinates}>
             <FaMapMarkerAlt />
           </div>
         </GoogleMapReact>
