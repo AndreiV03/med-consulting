@@ -32,7 +32,6 @@ const Home: NextPage = () => {
         <div className={styles.column}>
           <h1 className={styles.title}>Sprijin pentru obținerea tratamentelor personalizate în clinicile din Viena</h1>
           <p>Oferim asistență în majoritatea clinicilor din Austria.</p>
-
           <div className={styles.buttons}>
             <div className={styles.button_fill}>Depunere dosar</div>
             <div className={styles.button_outline}>Trimite un mesaj</div>
@@ -63,7 +62,6 @@ const Home: NextPage = () => {
 
       <div className={styles.slideshow}>
         <h2 className={styles.title}>Specializările noastre</h2>
-
         <div className={styles.container}>
           {services.map(service => (
             <AnimatePresence key={service}>

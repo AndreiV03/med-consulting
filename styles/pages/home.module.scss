@@ -1,6 +1,7 @@
 // Hero Section
 
 .hero_section {
+  margin-top: 66px;
   padding: 2.5rem 0 0;
   display: flex;
   flex-direction: column;
@@ -291,11 +292,11 @@
 
     .column:last-child {
       position: absolute;
-      top: 0;
+      top: 66px;
       right: 0;
       width: 45vw;
       max-height: 800px;
-      margin: 66px 0 0;
+      margin: 0;
 
       .box:first-child {
         width: 33vw;
