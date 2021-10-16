@@ -1,11 +1,13 @@
 :root {
   --foreground: #000000;
   --background: #ffffff;
+  --line: #e2e0de;
+
   --accent: #6633cc;
   --dark-accent: #5229a3;
-  --light-accent: hsl(260, 60%, 95%);
   --secondary: #ff6633;
-  --line: #e2e0de;
+
+  --header-height: 66px;
 }
 
 *,
@@ -35,11 +37,10 @@ button {
 }
 
 body {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none;
 
   &::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for Chrome, Safari and Opera */
+    display: none;
   }
 }
 

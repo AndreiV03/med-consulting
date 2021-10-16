@@ -1,5 +1,7 @@
-body.menu_active {
-  overflow: hidden;
+body {
+  &.menu_active {
+    overflow: hidden;
+  }
 }
 
 .page {

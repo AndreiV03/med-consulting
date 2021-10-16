@@ -1,15 +1,15 @@
 .footer {
   width: 100%;
-  padding: 0 7vw 2rem;
+  padding: 2rem 7vw;
   background: var(--accent);
   color: var(--background);
 
   .prefooter {
-    padding: 5rem 0;
     text-align: center;
+    margin: 2rem 0 4rem;
 
     h2 {
-      font-size: 3rem;
+      font-size: 2.5rem;
       font-weight: 700;
     }
 

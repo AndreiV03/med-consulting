@@ -6,7 +6,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import { motion, AnimatePresence } from "framer-motion";
 
 import styles from "../styles/pages/home.module.scss";
-import { slideshowVariants } from "../data/variants";
+import { slideshowVariants } from "../variants/HomePageVariants";
 
 const services = ["chirurgie", "ortopedie", "cardiologie", "oncologie", "oftalmologie", "radiologie", "inflirtații"];
 

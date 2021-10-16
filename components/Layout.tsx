@@ -1,31 +1,22 @@
-import { useState, ReactNode } from "react";
-import { Helmet, HelmetProvider } from "react-helmet-async";
+import LayoutContextProvider from "../contexts/LayoutContext";
 
 import styles from "../styles/components/layout.module.scss";
+import HelmetComponent from "./Helmet";
 import Label from "./Label";
 import Header from "./Header";
 import Menu from "./Menu";
 import Footer from "./Footer";
 
-interface Props {
-  children: ReactNode;
-};
-
-const Layout = ({ children }: Props): JSX.Element => {
-  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-  
+const Layout: React.FC = ({ children }) => {
   return (
-    <HelmetProvider>
-      <Helmet>
-        <body className={isMenuOpen ? styles.menu_active : ""} />
-      </Helmet>
-
-      <Label />
-      <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-      <Menu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-      <div className={styles.page}>{children}</div>
-      <Footer />
-    </HelmetProvider>
+    <LayoutContextProvider>
+        <HelmetComponent />
+        <Label />
+        <Header />
+        <Menu />
+        <div className={styles.page}>{children}</div>
+        <Footer />
+    </LayoutContextProvider>
   );
 }
 

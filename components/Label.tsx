@@ -1,21 +1,13 @@
-import Link from "next/link";
-import { IoIosArrowForward } from "react-icons/io";
-
 import styles from "../styles/components/label.module.scss";
+import Link from "./Link";
 
-const Label = (): JSX.Element => {
+const Label: React.FC = () => {
   return (
     <div className={styles.label}>
-      <p>
+      <div className={styles.container}>
         <span>Evaluare dosar medical fără costuri.</span>
-
-        <Link href="/prices" passHref>
-          <a className={styles.link}>
-            <span>Află mai multe</span>
-            <IoIosArrowForward />
-          </a>
-        </Link>
-      </p>
+        <Link href="/" className={styles.link}>Află mai multe!</Link>
+      </div>
     </div>
   );
 }

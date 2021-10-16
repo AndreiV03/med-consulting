@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 
-interface StateObject {
+interface HookStateInterface {
   scrollX: number;
   scrollY: number;
   scrollHorizontalDirection: string;
@@ -10,15 +10,16 @@ interface StateObject {
 type CallbackFunction = (event: Event) => void;
 
 export default function useScroll() {
-  if (typeof window === "undefined")
+  if (typeof window === "undefined") {
     return {
       scrollX: 0,
       scrollY: 0,
       scrollHorizontalDirection: "",
       scrollVerticalDirection: ""
-    }
+    };
+  }
 
-  const [state, setState] = useState<StateObject>(() => {
+  const [state, setState] = useState<HookStateInterface>(() => {
     const bodyOffset = document.body.getBoundingClientRect();
 
     return {
@@ -30,7 +31,7 @@ export default function useScroll() {
   });
 
   const handleScrollEvent = useCallback<CallbackFunction>(() => {
-    setState((prevState: StateObject) => {
+    setState(prevState => {
       const bodyOffset = document.body.getBoundingClientRect();
 
       return {
@@ -54,5 +55,5 @@ export default function useScroll() {
     scrollY: state.scrollY,
     scrollHorizontalDirection: state.scrollHorizontalDirection,
     scrollVerticalDirection: state.scrollVerticalDirection
-  }
+  };
 }
