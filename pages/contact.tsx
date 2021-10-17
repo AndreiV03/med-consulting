@@ -11,7 +11,7 @@ const Contact: NextPage = () => {
       </div>
 
       <div className={styles.content}>
-        <h2>We're here to help</h2>
+        <h2>We are here to help</h2>
         <div className={styles.container}>
           <h3>Already a member?</h3>
           <p>The fastest way to get care and answers to your questions is through our app (iPhone or Android) or website.</p>
