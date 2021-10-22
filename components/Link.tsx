@@ -4,7 +4,6 @@ interface PropsInterface {
   href: string;
   children: React.ReactNode;
   className?: string;
-  onClick?: () => any;
 };
 
 const Link: React.FC<PropsInterface> = ({ href, children, ...props }) => {

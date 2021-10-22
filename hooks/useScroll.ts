@@ -7,9 +7,7 @@ interface HookStateInterface {
   scrollVerticalDirection: string;
 };
 
-type CallbackFunction = (event: Event) => void;
-
-export default function useScroll() {
+const useScroll = () => {
   if (typeof window === "undefined") {
     return {
       scrollX: 0,
@@ -27,10 +25,10 @@ export default function useScroll() {
       scrollY: bodyOffset.top,
       scrollHorizontalDirection: "",
       scrollVerticalDirection: ""
-    }
+    };
   });
 
-  const handleScrollEvent = useCallback<CallbackFunction>(() => {
+  const handleScrollEvent = useCallback(() => {
     setState(prevState => {
       const bodyOffset = document.body.getBoundingClientRect();
 
@@ -39,15 +37,13 @@ export default function useScroll() {
         scrollY: -bodyOffset.top,
         scrollHorizontalDirection: prevState.scrollX > bodyOffset.left ? "right" : "left",
         scrollVerticalDirection: prevState.scrollY > -bodyOffset.top ? "up" : "down"
-      }
+      };
     });
   }, []);
 
   useEffect(() => {
-    const scrollListener = (event: Event) => handleScrollEvent(event);
-
-    window.addEventListener("scroll", scrollListener);
-    return () => window.removeEventListener("scroll", scrollListener);
+    window.addEventListener("scroll", handleScrollEvent);
+    return () => window.removeEventListener("scroll", handleScrollEvent);
   }, [handleScrollEvent]);
 
   return {
@@ -57,3 +53,5 @@ export default function useScroll() {
     scrollVerticalDirection: state.scrollVerticalDirection
   };
 }
+
+export default useScroll;

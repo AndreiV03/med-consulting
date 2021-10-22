@@ -10,12 +10,12 @@ import Footer from "./Footer";
 const Layout: React.FC = ({ children }) => {
   return (
     <LayoutContextProvider>
-        <HelmetComponent />
-        <Label />
-        <Header />
-        <Menu />
-        <div className={styles.page}>{children}</div>
-        <Footer />
+      <HelmetComponent />
+      <Label />
+      <Header />
+      <Menu />
+      <div className={styles.page}>{children}</div>
+      <Footer />
     </LayoutContextProvider>
   );
 }

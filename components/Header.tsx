@@ -8,13 +8,13 @@ import Link from "./Link";
 import Logo from "../assets/Logo";
 
 const Header: React.FC = () => {
-  const { isMenuOpen: [isMenuOpen, setIsMenuOpen], scrollY } = useContext(LayoutContext);
+  const { isMenuOpen: [isMenuOpen, setIsMenuOpen], isHeaderWhite, scrollY } = useContext(LayoutContext);
 
   return (
     <header>
-      <div className={`${styles.header} ${isMenuOpen ? styles.menu_active : ""} ${scrollY > 66 ? styles.fixed : ""}`}>
+      <div className={`${styles.header} ${isMenuOpen ? styles.menu_active : ""} ${scrollY > 66 ? styles.fixed : ""} ${isHeaderWhite ? styles.white : ""}`}>
         <Link href="/">
-          <div className={styles.logo} onClick={() => setIsMenuOpen(false)}><Logo /></div>
+          <div className={styles.logo}><Logo /></div>
         </Link>
 
         <div className={styles.container}>

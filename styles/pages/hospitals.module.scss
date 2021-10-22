@@ -3,7 +3,7 @@
   width: 100vw;
   min-height: 100vh;
   transform: translate(-7vw);
-  padding: 2rem 7vw;
+  padding: calc(var(--header-height) + 2rem) 7vw 2rem;
 
   h2 {
     font-size: 2rem;

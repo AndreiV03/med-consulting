@@ -1,0 +1,202 @@
+.hero_section {
+  background-image: url("https://www.onemedical.com/media/images/about-hero_recut_FNQDEDZ.original.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  width: 100vw;
+  min-height: 100vh;
+  transform: translateX(-7vw);
+  padding: 200px 7vw;
+  color: var(--background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .title {
+      font-size: 3rem;
+      font-weight: 800;
+      margin: 1rem 0 2.5rem;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .button {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--accent);
+      background: var(--background);
+      border-radius: 2em;
+      width: fit-content;
+      padding: 1em 2em;
+      margin-top: 1rem;
+      cursor: pointer;
+      transition: 100ms ease-in;
+      height: fit-content;
+      white-space: nowrap;
+
+      &:hover {
+        background: var(--line);
+      }
+    }
+  }
+}
+
+.content {
+  margin: 5rem 0;
+  color: var(--accent);
+
+  .top_section {
+    margin-bottom: 4rem;
+    text-align: center;
+
+    p {
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+  }
+
+  .items {
+    .item {
+      display: flex;
+      flex-direction: column;
+
+      &:not(:last-child) {
+        margin-bottom: 4rem;
+      }
+
+      .wrapper {
+        width: 100%;
+        position: relative;
+
+        & > div {
+          position: unset !important;
+        }
+
+        img {
+          object-fit: contain;
+          width: 100% !important;
+          position: relative !important;
+          height: unset !important;
+        }
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h3 {
+          font-size: 2.25rem;
+          font-weight: 600;
+        }
+
+        p {
+          font-size: 1rem;
+          font-weight: 400;
+          margin: 1rem 0 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero_section {
+    .container {
+      align-items: center;
+      text-align: center;
+
+      .title {
+        max-width: 70vw;
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+
+  .content {
+    .top_section {
+      max-width: 60vw;
+      margin: 0 auto 5rem;
+
+      p {
+        font-size: 1.125rem;
+      }
+    }
+
+    .items {
+      .item {
+        flex-direction: row;
+        gap: 4rem;
+
+        &:not(:last-child) {
+          margin-bottom: 5rem;
+        }
+
+        .wrapper,
+        .container {
+          flex: 1;
+        }
+
+        .container {
+          h3 {
+            font-size: 3rem;
+          }
+
+          p {
+            font-size: 1.125rem;
+          }
+        }
+
+        &:nth-child(even) {
+          .container {
+            order: 1;
+          }
+
+          .wrapper {
+            order: 2;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1262px) {
+  .hero_section {
+    .container {
+      .title {
+        font-size: 5.5rem;
+      }
+    }
+  }
+
+  .content {
+    margin: 7.5rem 0;
+
+    .top_section {
+      margin-bottom: 7.5rem;
+    }
+
+    .items {
+      .item {
+        &:not(:last-child) {
+          margin-bottom: 7.5rem;
+        }
+
+        .container {
+          h3 {
+            font-size: 4.5rem;
+          }
+        }
+      }
+    }
+  }
+}

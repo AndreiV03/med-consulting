@@ -59,6 +59,33 @@
     }
   }
 
+  &.white:not(.menu_active):not(.fixed) {
+    .logo svg path {
+      fill: var(--background);
+    }
+
+    .container .links {
+      &:first-child::before {
+        background: var(--background);
+      }
+
+      .link {
+        color: var(--background);
+      }
+    }
+
+    .button {
+      .hamburger {
+        background: var(--background);
+
+        &::before,
+        &::after {
+          background: var(--background);
+        }
+      }
+    }
+  }
+
   .logo {
     height: 100%;
     display: flex;
