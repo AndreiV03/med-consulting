@@ -62,25 +62,30 @@
   &.white:not(.menu_active):not(.fixed) {
     .logo svg path {
       fill: var(--background);
+      transition: unset;
     }
 
     .container .links {
       &:first-child::before {
         background: var(--background);
+        transition: unset;
       }
 
       .link {
         color: var(--background);
+        transition: unset;
       }
     }
 
     .button {
       .hamburger {
         background: var(--background);
+        transition: unset;
 
         &::before,
         &::after {
           background: var(--background);
+          transition: unset;
         }
       }
     }
