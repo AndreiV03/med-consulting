@@ -75,6 +75,7 @@
       .wrapper {
         width: 100%;
         position: relative;
+        margin-bottom: 2rem;
 
         & > div {
           position: unset !important;
@@ -138,6 +139,10 @@
 
         &:not(:last-child) {
           margin-bottom: 5rem;
+        }
+
+        .wrapper {
+          margin-bottom: unset;
         }
 
         .wrapper,
