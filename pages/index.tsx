@@ -30,7 +30,7 @@ const Home: NextPage = () => {
     <>
       <div className={styles.hero_section}>
         <div className={styles.column}>
-          <h1 className={styles.title}>Sprijin pentru obținerea tratamentelor personalizate în clinicile din Viena</h1>
+          <h1 className={styles.title}>Oferim sprijin pentru obținerea tratamentelor personalizate în clinicile din Viena</h1>
           <p>Oferim asistență în majoritatea clinicilor din Austria.</p>
           <div className={styles.buttons}>
             <div className={styles.button_fill}>Depunere dosar</div>
