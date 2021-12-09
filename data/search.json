@@ -1,0 +1,32 @@
+[
+  {
+    "url": "/",
+    "page": "Acasa",
+    "title": "Suport pentru accesarea tratamentelor personalizate în spitalele si clinicile din Viena.",
+    "description": "Oferim asistență si consiliere in sistemul medical din Austria. Proin viverra eu erat non luctus. Mauris nec dapibus velit. In hac habitasse platea dictumst. Morbi quam nunc, pulvinar finibus iaculis at, ultrices sed eros. Pellentesque ultricies rhoncus ipsum, dignissim efficitur lacus vestibulum non. Phasellus scelerisque ligula sit amet diam vulputate accumsan. Quisque viverra ut ligula ac pulvinar. Nam vehicula velit id elit laoreet bibendum."
+  },
+  {
+    "url": "/",
+    "page": "Acasa",
+    "title": "Specializările noastre",
+    "description": "Integer interdum, erat ut aliquet malesuada, ante sem faucibus tellus, nec tincidunt ipsum augue vel leo. In quis elit mi. Vestibulum vel est tortor. Cras eleifend iaculis lectus congue finibus. Cras nulla lacus, tincidunt at leo eget, suscipit ultrices nulla. Ut sodales urna quam, non interdum nisl sollicitudin nec."
+  },
+  {
+    "url": "/about-us",
+    "page": "Despre noi",
+    "title": "We make people fall in love with their doctor's office",
+    "description": "Fusce vitae nunc at justo laoreet ullamcorper vitae id eros. Aliquam condimentum, magna ut viverra pulvinar, dolor ipsum accumsan eros, id dictum urna magna nec ligula. Aliquam lacus diam, eleifend quis faucibus vel, tincidunt rhoncus magna. Quisque et ligula sed purus semper consequat. Sed auctor ultricies orci ac imperdiet. Aliquam gravida magna neque, eu hendrerit ligula interdum non."
+  },
+  {
+    "url": "/services",
+    "page": "Servicii",
+    "title": "Suntem baza dvs. de asistență medicală",
+    "description": "La Med Consulting, avem grijă de orice, de la boli comune la boli cronice și probleme de sănătate mintală. Îngrijirea primară nu este destinată doar bolnavilor - suntem aici și pentru a vă ajuta să preveniți bolile și să vă mențineți starea de sănătate optimă. Ne vom lua întotdeauna timpul să vă ascultăm, să vă respectăm părerea și să ne îngrijim ca o persoană întreagă."
+  },
+  {
+    "url": "/services",
+    "page": "Servicii",
+    "title": "Conditii cronice",
+    "description": "De la artrită la zaspopatie, vom diagnostica și vă vom ajuta să gestionați o gamă enormă de afecțiuni și, atunci când este necesar, vă vom conecta la specialiști și instituții de talie mondială pentru a vă asigura că aveți cea mai bună îngrijire posibilă."
+  }
+]

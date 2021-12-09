@@ -1,12 +1,12 @@
-import NextLink from 'next/link';
+import NextLink from "next/link";
+import { ComponentProps } from "react";
 
-interface PropsInterface {
+interface Props extends ComponentProps<"a"> {
   href: string;
-  children: React.ReactNode;
-  className?: string;
+  children?: React.ReactNode;
 };
 
-const Link: React.FC<PropsInterface> = ({ href, children, ...props }) => {
+const Link: React.FC<Props> = ({ href, children, ...props }) => {
   return (
     <NextLink href={href}>
       <a {...props}>
