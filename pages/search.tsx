@@ -27,7 +27,7 @@ const Search: NextPage = () => {
       <div className={styles.results}>
         {results.map(result => (
           <div key={1} className={styles.result}>
-            <div className={styles.current_page}>{result.page}</div>
+            <div className={styles.current_page}>{result.item.page}</div>
             <div className={styles.title}>{result.item.title.length > 30 ? `${result.item.title.slice(0, 30)}...` : result.item.title}</div>
             <div className={styles.description}>{result.item.description}</div>
             <Link href={result.item.url} />
