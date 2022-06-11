@@ -11,30 +11,30 @@ const Contact: NextPage = () => {
       </div>
 
       <div className={styles.content}>
-        <h2>We are here to help</h2>
+        <h2>Lorem ipsum dolor sit amet</h2>
         <div className={styles.container}>
-          <h3>Already a member?</h3>
-          <p>The fastest way to get care and answers to your questions is through our app (iPhone or Android) or website.</p>
+          <h3>Lorem ipsum</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vehicula mattis pharetra.</p>
         </div>
         <div className={styles.container}>
-          <h4>Lab hours</h4>
-          <p>We update the app and website daily with the latest hours.</p>
+          <h4>Lorem ipsum dolor sit amet</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vehicula mattis pharetra. Fusce neque sapien, iaculis sit amet turpis vel, porta dictum lacus.</p>
         </div>
         <div className={styles.container}>
-          <h4>Care for health concerns</h4>
-          <p>You can use the app or website to book, cancel, and reschedule In-Office or Remote Visits as well as send messages to your provider. You can also get 24/7 on-demand care with Video Chat in the app.</p>
+          <h4>Lorem ipsum dolor sit amet</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vehicula mattis pharetra. Fusce neque sapien, iaculis sit amet turpis vel, porta dictum lacus.</p>
         </div>
         <div className={styles.container}>
-          <h4>Billing help</h4>
-          <p>Have a billing question? Just send our admin team a message through the app or website and we’ll get back to you as quickly as possible. Don’t worry if your payment due date is coming up — you won’t be marked late while we work to resolve your concern.</p>
+          <h4>Lorem ipsum dolor sit amet</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vehicula mattis pharetra. Fusce neque sapien, iaculis sit amet turpis vel, porta dictum lacus.</p>
         </div>
         <div className={styles.container}>
-          <h4>Technical issues</h4>
-          <p>Having trouble with the One Medical app or your online account? Please email our team at techsupport@onemedical.com.</p>
+          <h4>Lorem ipsum dolor sit amet</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vehicula mattis pharetra. Fusce neque sapien, iaculis sit amet turpis vel, porta dictum lacus.</p>
         </div>
         <div className={styles.container}>
-          <h3>Not a member yet?</h3>
-          <p>We’re always here to help. Just give us a call at 1-888-ONEMED1 (1-888-663-6331) or drop us a line at feedback@onemedical.com and we’ll take care of you.</p>
+          <h3>Lorem ipsum dolor</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vehicula mattis pharetra.</p>
         </div>
 
         <h2>Contact information</h2>
