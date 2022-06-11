@@ -42,15 +42,8 @@ const Contact: NextPage = () => {
           <h3>Office Headquarters</h3>
         </div>
         <div className={styles.container}>
-          <h4>San Francisco, West Coast Headquarters</h4>
-          <p>One Embarcadero Center</p>
-          <p>Suite 1900</p>
-          <p>San Francisco, CA 94111</p>
-        </div>
-        <div className={styles.container}>
-          <h4>New York City, East Coast Headquarters</h4>
-          <p>129 West 29th Street</p>
-          <p>New York, NY 10001</p>
+          <h4>Pelikangasse 15, Austria</h4>
+          <p>1090 Wien</p>
         </div>
       </div>
     </>
